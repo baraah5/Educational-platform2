@@ -1,17 +1,76 @@
 AOS.init();
 
+
+
+const active = document.querySelector('.back-top')
+
+const footer = document.querySelector("footer")
+const header = document.querySelector("header")
+
+// console.log(lang);
+export let siteLang = document.documentElement.lang;
+
+
+// const headerInfo = [
+//     {
+//         head:{
+//             ar:" منصة التعليم الأكاديمي ",
+//             en:"Academic Education Platform"
+//         },
+//         nav1:{
+//             ar:" الرئيسية ",
+//             en:"Home"
+//         },
+//         nav2:{
+//             ar:" الكورسات ",
+//             en:"Courses"
+//         },
+//         nav3:{
+//             ar:" حول المنصة ",
+//             en:"About the platform"
+//         }
+//     }
+// ]
+
+
+// headerInfo.forEach(info => {
+//         let item = `<nav class="navbar fixed-top border-bottom navbar-expand-lg bg-body-tertiary">
+//             <div class="container-fluid">
+//                 <!--  abo alQombos !!!!!!!!!!  -->
+//                 <a class="nav-link f-20 bold" href="#"><i class="f-27 fa-solid fa-book" style="color: #4F39F6;"></i>${info.head[siteLang]}</a>
+
+//                     <div class="menu">
+//                     <button><i class="fas fa-bars"></i></button>
+//                 </div>
+
+//                 <div class="sidemenu">
+//                     <button class="close"><i class="fas fa-times"></i></button>
+//                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+//                         <li class="bold nav-item"><a class="nav-link active" href="index.html">${info.nav1[siteLang]}</a></li>
+//                         <li class="bold nav-item"><a class="nav-link" href="course.html">${info.nav2[siteLang]}</a></li>
+//                         <li class="bold nav-item"><a class="nav-link" href="about.html">${info.nav3[siteLang]}</a></li>
+//                         <li class="lang bold nav-item ">English</li>
+//                     </ul>
+//                 </div>
+//             </div>
+//         </nav>`
+
+//         header?.insertAdjacentHTML('beforeend', item);
+//     })
+
+
+    
 const open = document.querySelector('.menu button')
 const close = document.querySelector('.sidemenu .close')
-const side = document.querySelector('.sidemenu')
-const active = document.querySelector('.back-top')
 const lang = document.querySelector(".lang")
-// console.log(lang);
-const siteLang = document.documentElement.lang;
-
+const side = document.querySelector('.sidemenu')
 checkActiveLink();
+
 open.onclick = () => side.classList.add('open')
 
 close.onclick = () =>  side.classList.remove('open')
+
+
 
 
 function checkActiveLink() {
@@ -48,22 +107,133 @@ active.onclick = () => {
     })
 }
 
-lang.onclick = ()=>{
-    if(document.documentElement.lang == "en"){
-        document.documentElement.lang = "ar"
-        document.documentElement.dir = "rtl"
-        lang.textContent = "English"
-    }else{
-        document.documentElement.lang = "en"
-        document.documentElement.dir = "ltr"
-        lang.textContent = "العربية"
-        console.log(55);
+const footerInfo = [
+    {
+        par:{
+            ar:" منصة التعليم الأكاديمي ©2026 جميع الحقوق محفوظة ",
+            en:"Academic Learning Platform ©2026 All rights reserved"
+        }
     }
+]
+
+// const headerInfo = [
+//     {
+//         head:{
+//             ar:" منصة التعليم الأكاديمي ",
+//             en:"Academic Education Platform"
+//         },
+//         nav1:{
+//             ar:" الرئيسية ",
+//             en:"Home"
+//         },
+//         nav2:{
+//             ar:" الكورسات ",
+//             en:"Courses"
+//         },
+//         nav3:{
+//             ar:" حول المنصة ",
+//             en:"About the platform"
+//         }
+//     }
+// ]
+
+
+function reset(){
+    if(footer){
+        footer.innerHTML = ""
+    }
+
+    // if(header){
+    //     header.innerHTML = ""
+    // }
+
+    footerInfo.forEach(info =>{
+        let item = `<div class="container text-center py-3">
+        <p class="f-20">${info.par[siteLang]}</p>
+        </div>`
+        footer?.insertAdjacentHTML('beforeend', item);
+    })
+
+    // headerInfo.forEach(info => {
+    //     let item = `<nav class="navbar fixed-top border-bottom navbar-expand-lg bg-body-tertiary">
+    //         <div class="container-fluid">
+    //             <!--  abo alQombos !!!!!!!!!!  -->
+    //             <a class="nav-link f-20 bold" href="#"><i class="f-27 fa-solid fa-book" style="color: #4F39F6;"></i>${info.head[siteLang]}</a>
+
+    //                 <div class="menu">
+    //                 <button><i class="fas fa-bars"></i></button>
+    //             </div>
+
+    //             <div class="sidemenu">
+    //                 <button class="close"><i class="fas fa-times"></i></button>
+    //                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+    //                     <li class="bold nav-item"><a class="nav-link active" href="index.html">${info.nav1[siteLang]}</a></li>
+    //                     <li class="bold nav-item"><a class="nav-link" href="course.html">${info.nav2[siteLang]}</a></li>
+    //                     <li class="bold nav-item"><a class="nav-link" href="about.html">${info.nav3[siteLang]}</a></li>
+    //                     <li class="lang bold nav-item ">English</li>
+    //                 </ul>
+    //             </div>
+    //         </div>
+    //     </nav>`
+
+    //     header?.insertAdjacentHTML('beforeend', item);
+    // })
 }
 
-const coursesData = [
+
+// const open = document.querySelector('.menu button')
+// const close = document.querySelector('.sidemenu .close')
+// open.onclick = () => side.classList.add('open')
+
+// close.onclick = () =>  side.classList.remove('open')
+
+
+export const courseBageInfo = [
+    {
+        title:{
+            ar:" الكورسات الأكاديمية ",
+            en:"Academic Courses"
+        },
+        desc:{
+            ar:" استعرض جميع كورسات الهندسة وتكنولوجيا المعلومات ",
+            en:"Browse all engineering and information technology courses."
+        }
+    }
+]
+
+export const levelsFormIfo = [
+    {
+        formName:{
+            ar:" تصفية الكورسات ",
+            en:"Course Clearance"
+        },
+        level:{
+            ar:" المستوى الأكاديمي ",
+            en:"Academic level"
+        },
+        levelPlace:{
+            ar:" المستوى الأكاديمي ",
+            en:"Academic level"
+        },
+        chapter:{
+            ar:" الفصل الدراسي ",
+            en:"The semester"
+        },
+        chapterPlace:{
+            ar:" الفصل الدراسي ",
+            en:"The semester"
+        }
+    }
+]
+
+
+export const coursesData = [
     {
         id: "cs",
+        idName:{
+            ar:" تكنولوجيا المعلومات ",
+            en:"Computer Science"
+        },
         name:{
             ar:" أساسيات البرمجة ",
             en:"Programming Fundamentals"
@@ -76,10 +246,18 @@ const coursesData = [
             ar:" الفصل الأول ",
             en:"Chapter One"
         },
-        link: ""
+        link: "",
+        show:{
+            ar:" عرض الكورس ",
+            en:"Course presentation"
+        }
     },
     {
         id: "eng",
+        idName:{
+            ar:" الهندسة ",
+            en:"Engineering"
+        },
         name:{
             ar:" الرياضيات الهندسية ",
             en:"Geometric Mathematics"
@@ -92,10 +270,18 @@ const coursesData = [
             ar:" الفصل الأول ",
             en:"Chapter One"
         }, 
-        link: "math.html"
+        link: "math.html",
+        show:{
+            ar:" عرض الكورس ",
+            en:"Course presentation"
+        }
     },
     {
         id: "cs",
+        idName:{
+            ar:" تكنولوجيا المعلومات ",
+            en:"Computer Science"
+        },
         name:{
             ar:" قواعد البيانات ",
             en:"Databases"
@@ -108,10 +294,18 @@ const coursesData = [
             ar:" الفصل الأول ",
             en:"Chapter One"
         },
-        link: ""
+        link: "",
+        show:{
+            ar:" عرض الكورس ",
+            en:"Course presentation"
+        }
     },
     {
         id: "eng",
+        idName:{
+            ar:" الهندسة ",
+            en:"Engineering"
+        },
         name:{
             ar:" الدوائر الكهربائية ",
             en:"Electrical circuits"
@@ -124,10 +318,18 @@ const coursesData = [
             ar:" الفصل الأول ",
             en:"Chapter One"
         },
-        link: ""
+        link: "",
+        show:{
+            ar:" عرض الكورس ",
+            en:"Course presentation"
+        }
     },
     {
         id: "cs",
+        idName:{
+            ar:" تكنولوجيا المعلومات ",
+            en:"Computer Science"
+        },
         name: {
             ar:" تطوير الويب ",
             en:""
@@ -140,10 +342,18 @@ const coursesData = [
             ar:" الفصل الثاني ",
             en:""
         },
-        link: ""
+        link: "",
+        show:{
+            ar:" عرض الكورس ",
+            en:"Course presentation"
+        }
     },
     {
         id: "eng",
+        idName:{
+            ar:" الهندسة ",
+            en:"Engineering"
+        },
         name:{
             ar:" الإلكترونيات الرقمية ",
             en:""
@@ -156,10 +366,18 @@ const coursesData = [
             ar:" الفصل الثاني ",
             en:""
         },
-        link: ""
+        link: "",
+        show:{
+            ar:" عرض الكورس ",
+            en:"Course presentation"
+        }
     },
     {
         id: "cs",
+        idName:{
+            ar:" تكنولوجيا المعلومات ",
+            en:"Computer Science"
+        },
         name:{
             ar:" الذكاء الاصطناعي ",
             en:""
@@ -172,10 +390,18 @@ const coursesData = [
             ar:" الفصل الأول ",
             en:""
         },
-        link: ""
+        link: "",
+        show:{
+            ar:" عرض الكورس ",
+            en:"Course presentation"
+        }
     },
     {
         id: "eng",
+        idName:{
+            ar:" الهندسة ",
+            en:"Engineering"
+        },
         name:{
             ar:" أنظمة التحكم ",
             en:""
@@ -188,10 +414,18 @@ const coursesData = [
             ar:" الفصل الأول ",
             en:""
         },
-        link: ""
+        link: "",
+        show:{
+            ar:" عرض الكورس ",
+            en:"Course presentation"
+        }
     },
     {
         id: "cs",
+        idName:{
+            ar:" تكنولوجيا المعلومات ",
+            en:"Computer Science"
+        },
         name:{
             ar:" أمن المعلومات ",
             en:""
@@ -204,10 +438,18 @@ const coursesData = [
             ar:" الفصل الثاني ",
             en:""
         },
-        link: ""
+        link: "",
+        show:{
+            ar:" عرض الكورس ",
+            en:"Course presentation"
+        }
     },
     {
         id: "eng",
+        idName:{
+            ar:" الهندسة ",
+            en:"Engineering"
+        },
         name:{
             ar:" هندسة الطاقة ",
             en:""
@@ -220,10 +462,18 @@ const coursesData = [
             ar:" الفصل الثاني ",
             en:""
         },
-        link: ""
+        link: "",
+        show:{
+            ar:" عرض الكورس ",
+            en:"Course presentation"
+        }
     },
     {
         id: "cs",
+        idName:{
+            ar:" تكنولوجيا المعلومات ",
+            en:"Computer Science"
+        },
         name:{
             ar:" هندسة البرمجيات ",
             en:""
@@ -236,11 +486,16 @@ const coursesData = [
             ar:" الفصل الأول ",
             en:""
         },
-        link: ""
-    },
+        link: "",
+        show:{
+            ar:" عرض الكورس ",
+            en:"Course presentation"
+        }
+    }
 ]
 
-const whyUsCards = [
+
+export const whyUsCards = [
     {
         icon: "fa-solid fa-book",
         title:{
@@ -309,7 +564,8 @@ const whyUsCards = [
     },
 ]
 
-const coursesNo = [
+
+export const coursesNo = [
     {
         no: "+",
         title:{
@@ -340,7 +596,7 @@ const coursesNo = [
     },
 ]
 
-const messages = [
+export const messages = [
     {
         icon:"fa-solid fa-users-rays",
         title:{
@@ -365,7 +621,7 @@ const messages = [
     },
 ]
 
-const valuables =[
+export const valuables =[
     {
         icon:"fa-solid fa-medal",
         title:{
@@ -434,7 +690,7 @@ const valuables =[
     },
 ]
 
-const whatWeDos = [
+export const whatWeDos = [
     {
         no: 1,
         title:{
@@ -480,3 +736,36 @@ const whatWeDos = [
         }
     },
 ]
+
+
+import * as script from "./script.js";
+import * as course from "./course.js";
+import * as about from "./about.js";
+
+script.reset()
+course.reset()
+about.reset()
+reset();
+
+lang.onclick = ()=>{
+    if(siteLang == "en"){
+        siteLang = "ar"
+        document.documentElement.dir = "rtl"
+        lang.textContent = "English"
+        script.reset()
+        course.reset()
+        about.reset()
+        reset();
+        // console.log(siteLang);
+    }else{
+        siteLang = "en"
+        document.documentElement.dir = "ltr"
+        lang.textContent = "العربية"
+        script.reset()
+        course.reset()
+        about.reset()
+        reset();
+        // console.log(siteLang);
+        // console.log(55);
+    }
+}

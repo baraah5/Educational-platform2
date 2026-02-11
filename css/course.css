@@ -8,7 +8,7 @@ body{
 }
 
 .sec1 i {
-    /* font-size: 50px; */
+    /* font-size: 50px; */ 
     /* color: #4F39F6; */
     padding: 0 5px 0 15px;
 }
@@ -28,6 +28,9 @@ form {
     flex-direction: column;
     gap: 12px;
     /* border: 0; */
+}
+.container{
+    width: 90%;
 }
 
 .contact-form input,
@@ -123,5 +126,8 @@ ul li::marker {
     .sec1 i{
         font-size: 25px;
         padding: 0 0 0 5px;
+    }
+    .container{
+        /* width: 90%; */
     }
 }

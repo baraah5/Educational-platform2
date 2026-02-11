@@ -36,19 +36,7 @@ const courseNo = document.querySelector(".hero2 .no")
 //     },
 // ]
 
-whyUsCards.forEach(card => {
-    let item = `<div class="col-lg-4 col-md-6 mb-4">
-                        <div class="whyUs">
-                            <div class="icon pb-3"><i class="${card.icon}"></i></div>
-                            <h5 class="pb-2 bold">${card.title[siteLang]}</h5>
-                            <p>${card.desc[siteLang]}</p>
-                        </div>
-                    </div>`
-    // if (whyUs) {
-    //     whyUs.insertAdjacentHTML('beforeend' , item);
-    // }
-    whyUs?.insertAdjacentHTML('beforeend', item);
-})
+
 
 // const coursesNo = [
 //     {
@@ -69,13 +57,46 @@ whyUsCards.forEach(card => {
 //     },
 // ]
 
-coursesNo.forEach(course => {
-    let item = `<div class="col-6 col-md-3">
-                        <p class="nom f-30 bold">${course.no}</p>
-                        <p class="f-20">${course.title[siteLang]}</p>
-                    </div>`
-    // if (courseNo) {
-    //     courseNo.insertAdjacentHTML('beforeend', item);
+import { whyUsCards } from "./main.js"
+import { coursesNo } from "./main.js"
+import { siteLang } from "./main.js"
+
+export function reset(){
+
+    if(whyUs){
+        whyUs.innerHTML = ""
+    }
+
+    if(courseNo){
+        courseNo.innerHTML = ""
+    }
+
+    whyUsCards.forEach(card => {
+    let item = `<div class="col-lg-4 col-md-6 mb-4">
+            <div class="whyUs">
+                <div class="icon pb-3"><i class="${card.icon}"></i></div>
+                <h5 class="pb-2 bold">${card.title[siteLang]}</h5>
+                <p>${card.desc[siteLang]}</p>
+            </div>
+        </div>`
+    // if (whyUs) {
+    //     whyUs.insertAdjacentHTML('beforeend' , item);
     // }
-    courseNo?.insertAdjacentHTML('beforeend', item);
-})
+    whyUs?.insertAdjacentHTML('beforeend', item);
+    // item = ``
+    })
+
+    coursesNo.forEach(course => {
+        let item = `<div class="col-6 col-md-3">
+                            <p class="nom f-30 bold">${course.no}</p>
+                            <p class="f-20">${course.title[siteLang]}</p>
+                        </div>`
+        // if (courseNo) {
+        //     courseNo.insertAdjacentHTML('beforeend', item);
+        // }
+        courseNo?.insertAdjacentHTML('beforeend', item);
+    })
+
+}
+
+// reset();

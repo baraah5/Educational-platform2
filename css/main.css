@@ -237,7 +237,8 @@ footer {
 .lang{
     cursor: pointer;
     /* background-color: #1447E6; */
-    padding: 8px 15px;
+    padding: 8px 8px;
+    font-size: 14px;
     border-radius: 10px;
     border: 2px solid #1447E6;
 }
@@ -285,6 +286,10 @@ footer {
         text-decoration: none;
         padding: 10px 0;
         color: #000;
+    }
+
+    .sidemenu ul li {
+        margin-bottom: 20px;
     }
 
     .sidemenu ul li:not(:last-child) a {

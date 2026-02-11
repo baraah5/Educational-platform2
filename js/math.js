@@ -85,7 +85,7 @@ done.forEach((el) => {
             // console.log(el);
             lecturesDone.push(el.dataset.id)
             // location.href = "https://youtu.be/YopKllz8jxE?si=O8mv7kdzKSsQk0kI"
-            window.open("https://youtu.be/YopKllz8jxE?si=O8mv7kdzKSsQk0kI", "_blank");
+            // window.open("https://youtu.be/YopKllz8jxE?si=O8mv7kdzKSsQk0kI", "_blank");
             // console.log(object);
             localStorage.setItem("lecturesDone", JSON.stringify(lecturesDone));
             // const check = el.querySelector(".check")
@@ -116,3 +116,5 @@ done.forEach((el) => {
         // console.log(check.children[0].classList + "     "+ check.children[1].classList);
     }
 })
+
+// reset();
