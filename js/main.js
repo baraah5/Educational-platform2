@@ -3,7 +3,7 @@ AOS.init();
 
 
 const active = document.querySelector('.back-top')
-
+// let lang = document.querySelector(".lang")
 const footer = document.querySelector("footer")
 const header = document.querySelector("header")
 
@@ -11,89 +11,10 @@ const header = document.querySelector("header")
 export let siteLang = document.documentElement.lang;
 
 
-// const headerInfo = [
-//     {
-//         head:{
-//             ar:" منصة التعليم الأكاديمي ",
-//             en:"Academic Education Platform"
-//         },
-//         nav1:{
-//             ar:" الرئيسية ",
-//             en:"Home"
-//         },
-//         nav2:{
-//             ar:" الكورسات ",
-//             en:"Courses"
-//         },
-//         nav3:{
-//             ar:" حول المنصة ",
-//             en:"About the platform"
-//         }
-//     }
-// ]
-
-
-// headerInfo.forEach(info => {
-//         let item = `<nav class="navbar fixed-top border-bottom navbar-expand-lg bg-body-tertiary">
-//             <div class="container-fluid">
-//                 <!--  abo alQombos !!!!!!!!!!  -->
-//                 <a class="nav-link f-20 bold" href="#"><i class="f-27 fa-solid fa-book" style="color: #4F39F6;"></i>${info.head[siteLang]}</a>
-
-//                     <div class="menu">
-//                     <button><i class="fas fa-bars"></i></button>
-//                 </div>
-
-//                 <div class="sidemenu">
-//                     <button class="close"><i class="fas fa-times"></i></button>
-//                     <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-//                         <li class="bold nav-item"><a class="nav-link active" href="index.html">${info.nav1[siteLang]}</a></li>
-//                         <li class="bold nav-item"><a class="nav-link" href="course.html">${info.nav2[siteLang]}</a></li>
-//                         <li class="bold nav-item"><a class="nav-link" href="about.html">${info.nav3[siteLang]}</a></li>
-//                         <li class="lang bold nav-item ">English</li>
-//                     </ul>
-//                 </div>
-//             </div>
-//         </nav>`
-
-//         header?.insertAdjacentHTML('beforeend', item);
-//     })
-
-
-    
-const open = document.querySelector('.menu button')
-const close = document.querySelector('.sidemenu .close')
-const lang = document.querySelector(".lang")
-const side = document.querySelector('.sidemenu')
-checkActiveLink();
-
-open.onclick = () => side.classList.add('open')
-
-close.onclick = () =>  side.classList.remove('open')
-
-
-
-
-function checkActiveLink() {
-    const links = document.querySelectorAll('.navbar-nav .nav-link');
-    // console.log(links);
-    const currentPath = window.location.pathname;
-    // console.log(currentPath);
-    links.forEach(link => {
-        // console.log(link.getAttribute('href'));
-        // if (link.getAttribute('href') === currentPath) {
-        if (currentPath.includes(link.getAttribute('href'))) {
-            link.classList.add('active');
-        } else {
-            link.classList.remove('active');
-        }
-    });
-}
 
 window.onscroll = ()=>{
-    // console.log(window.pageYOffset)
 
     if(window.pageYOffset > 300){
-        // console.log('ntjg')
         active.classList.add('active')
     } else {
         active.classList.remove('active')
@@ -116,26 +37,30 @@ const footerInfo = [
     }
 ]
 
-// const headerInfo = [
-//     {
-//         head:{
-//             ar:" منصة التعليم الأكاديمي ",
-//             en:"Academic Education Platform"
-//         },
-//         nav1:{
-//             ar:" الرئيسية ",
-//             en:"Home"
-//         },
-//         nav2:{
-//             ar:" الكورسات ",
-//             en:"Courses"
-//         },
-//         nav3:{
-//             ar:" حول المنصة ",
-//             en:"About the platform"
-//         }
-//     }
-// ]
+const headerInfo = [
+    {
+        head:{
+            ar:" منصة التعليم الأكاديمي ",
+            en:"Academic Education Platform"
+        },
+        nav1:{
+            ar:" الرئيسية ",
+            en:"Home"
+        },
+        nav2:{
+            ar:" الكورسات ",
+            en:"Courses"
+        },
+        nav3:{
+            ar:" حول المنصة ",
+            en:"About the platform"
+        },
+        lang:{
+            ar:"English",
+            en:" العربية "
+        }
+    }
+]
 
 
 function reset(){
@@ -143,9 +68,9 @@ function reset(){
         footer.innerHTML = ""
     }
 
-    // if(header){
-    //     header.innerHTML = ""
-    // }
+    if(header){
+        header.innerHTML = ""
+    }
 
     footerInfo.forEach(info =>{
         let item = `<div class="container text-center py-3">
@@ -154,38 +79,66 @@ function reset(){
         footer?.insertAdjacentHTML('beforeend', item);
     })
 
-    // headerInfo.forEach(info => {
-    //     let item = `<nav class="navbar fixed-top border-bottom navbar-expand-lg bg-body-tertiary">
-    //         <div class="container-fluid">
-    //             <!--  abo alQombos !!!!!!!!!!  -->
-    //             <a class="nav-link f-20 bold" href="#"><i class="f-27 fa-solid fa-book" style="color: #4F39F6;"></i>${info.head[siteLang]}</a>
+    headerInfo.forEach(info => {
+        let item = `<nav class="navbar fixed-top border-bottom navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <!--  abo alQombos !!!!!!!!!!  -->
+                <a class="nav-link f-20 bold" href="#"><i class="f-27 fa-solid fa-book" style="color: #4F39F6;"></i>${info.head[siteLang]}</a>
 
-    //                 <div class="menu">
-    //                 <button><i class="fas fa-bars"></i></button>
-    //             </div>
+                    <div class="menu">
+                    <button><i class="fas fa-bars"></i></button>
+                </div>
 
-    //             <div class="sidemenu">
-    //                 <button class="close"><i class="fas fa-times"></i></button>
-    //                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-    //                     <li class="bold nav-item"><a class="nav-link active" href="index.html">${info.nav1[siteLang]}</a></li>
-    //                     <li class="bold nav-item"><a class="nav-link" href="course.html">${info.nav2[siteLang]}</a></li>
-    //                     <li class="bold nav-item"><a class="nav-link" href="about.html">${info.nav3[siteLang]}</a></li>
-    //                     <li class="lang bold nav-item ">English</li>
-    //                 </ul>
-    //             </div>
-    //         </div>
-    //     </nav>`
+                <div class="sidemenu">
+                    <button class="close"><i class="fas fa-times"></i></button>
+                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+                        <li class="bold nav-item"><a class="nav-link active" href="index.html">${info.nav1[siteLang]}</a></li>
+                        <li class="bold nav-item"><a class="nav-link" href="course.html">${info.nav2[siteLang]}</a></li>
+                        <li class="bold nav-item"><a class="nav-link" href="about.html">${info.nav3[siteLang]}</a></li>
+                        <li class="lang bold nav-item ">${info.lang[siteLang]}</li>
+                    </ul>
+                </div>
+            </div>
+        </nav>`
 
-    //     header?.insertAdjacentHTML('beforeend', item);
-    // })
+        header?.insertAdjacentHTML('beforeend', item);
+        // lang = document.querySelector(".lang")
+        // console.log(lang);
+    })
+
+
 }
 
 
-// const open = document.querySelector('.menu button')
-// const close = document.querySelector('.sidemenu .close')
-// open.onclick = () => side.classList.add('open')
+reset();
 
-// close.onclick = () =>  side.classList.remove('open')
+const open = document.querySelector('.menu button')
+const close = document.querySelector('.sidemenu .close')
+// let lang = document.querySelector(".lang")
+const side = document.querySelector('.sidemenu')
+// console.log(lang);
+checkActiveLink();
+// console.log(open);
+
+open.onclick = () => side.classList.add('open')
+
+close.onclick = () =>  side.classList.remove('open')
+
+
+
+
+function checkActiveLink() {
+    const links = document.querySelectorAll('.navbar-nav .nav-link');
+    const currentPath = window.location.pathname;
+    links.forEach(link => {
+        if (currentPath.includes(link.getAttribute('href'))) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
+
 
 
 export const courseBageInfo = [
@@ -745,27 +698,50 @@ import * as about from "./about.js";
 script.reset()
 course.reset()
 about.reset()
-reset();
 
-lang.onclick = ()=>{
-    if(siteLang == "en"){
-        siteLang = "ar"
-        document.documentElement.dir = "rtl"
-        lang.textContent = "English"
+// console.log(lang);
+
+// lang.onclick = ()=>{
+//     // console.log(lang);
+//         // console.log(siteLang);
+//     if(siteLang == "en"){
+//         siteLang = "ar"
+//         document.documentElement.dir = "rtl"
+//         lang.textContent = "English"
+//         script.reset()
+//         course.reset()
+//         about.reset()
+//         reset();
+//         // console.log(siteLang);
+//         // console.log(66);
+//     }else{
+//         siteLang = "en"
+//         document.documentElement.dir = "ltr"
+//         lang.textContent = "العربية"
+//         script.reset()
+//         course.reset()
+//         about.reset()
+//         reset();
+//         // console.log(siteLang);
+//         // console.log(siteLang);
+//         // console.log(55);
+//     }
+//     // console.log(lang);
+// }
+
+document.onclick = (e)=>{
+    if(e.target.classList.contains("lang")){
+        if(siteLang == "en"){
+            siteLang = "ar"
+            document.documentElement.dir = "rtl"
+        } else {
+            siteLang = "en"
+            document.documentElement.dir = "ltr"
+        }
+
         script.reset()
         course.reset()
         about.reset()
-        reset();
-        // console.log(siteLang);
-    }else{
-        siteLang = "en"
-        document.documentElement.dir = "ltr"
-        lang.textContent = "العربية"
-        script.reset()
-        course.reset()
-        about.reset()
-        reset();
-        // console.log(siteLang);
-        // console.log(55);
+        reset()
     }
 }
