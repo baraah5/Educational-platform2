@@ -28,83 +28,83 @@ active.onclick = () => {
     })
 }
 
-const footerInfo = [
-    {
-        par:{
-            ar:" منصة التعليم الأكاديمي ©2026 جميع الحقوق محفوظة ",
-            en:"Academic Learning Platform ©2026 All rights reserved"
-        }
-    }
-]
+// const footerInfo = [
+//     {
+//         par:{
+//             ar:" منصة التعليم الأكاديمي ©2026 جميع الحقوق محفوظة ",
+//             en:"Academic Learning Platform ©2026 All rights reserved"
+//         }
+//     }
+// ]
 
-const headerInfo = [
-    {
-        head:{
-            ar:" منصة التعليم الأكاديمي ",
-            en:"Academic Education Platform"
-        },
-        nav1:{
-            ar:" الرئيسية ",
-            en:"Home"
-        },
-        nav2:{
-            ar:" الكورسات ",
-            en:"Courses"
-        },
-        nav3:{
-            ar:" حول المنصة ",
-            en:"About the platform"
-        },
-        lang:{
-            ar:"English",
-            en:" العربية "
-        }
-    }
-]
+// const headerInfo = [
+//     {
+//         head:{
+//             ar:" منصة التعليم الأكاديمي ",
+//             en:"Academic Education Platform"
+//         },
+//         nav1:{
+//             ar:" الرئيسية ",
+//             en:"Home"
+//         },
+//         nav2:{
+//             ar:" الكورسات ",
+//             en:"Courses"
+//         },
+//         nav3:{
+//             ar:" حول المنصة ",
+//             en:"About the platform"
+//         },
+//         lang:{
+//             ar:"English",
+//             en:" العربية "
+//         }
+//     }
+// ]
 
 
 function reset(){
-    if(footer){
-        footer.innerHTML = ""
-    }
+    // if(footer){
+    //     footer.innerHTML = ""
+    // }
 
-    if(header){
-        header.innerHTML = ""
-    }
+    // if(header){
+    //     header.innerHTML = ""
+    // }
 
-    footerInfo.forEach(info =>{
-        let item = `<div class="container text-center py-3">
-        <p class="f-20">${info.par[siteLang]}</p>
-        </div>`
-        footer?.insertAdjacentHTML('beforeend', item);
-    })
+    // footerInfo.forEach(info =>{
+    //     let item = `<div class="container text-center py-3">
+    //     <p class="f-20">${info.par[siteLang]}</p>
+    //     </div>`
+    //     footer?.insertAdjacentHTML('beforeend', item);
+    // })
 
-    headerInfo.forEach(info => {
-        let item = `<nav class="navbar fixed-top border-bottom navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <!--  abo alQombos !!!!!!!!!!  -->
-                <a class="nav-link f-20 bold" href="#"><i class="f-27 fa-solid fa-book" style="color: #4F39F6;"></i>${info.head[siteLang]}</a>
+    // headerInfo.forEach(info => {
+    //     let item = `<nav class="navbar fixed-top border-bottom navbar-expand-lg bg-body-tertiary">
+    //         <div class="container-fluid">
+    //             <!--  abo alQombos !!!!!!!!!!  -->
+    //             <a class="nav-link f-20 bold" href="#"><i class="f-27 fa-solid fa-book" style="color: #4F39F6;"></i>${info.head[siteLang]}</a>
 
-                    <div class="menu">
-                    <button><i class="fas fa-bars"></i></button>
-                </div>
+    //                 <div class="menu">
+    //                 <button><i class="fas fa-bars"></i></button>
+    //             </div>
 
-                <div class="sidemenu">
-                    <button class="close"><i class="fas fa-times"></i></button>
-                    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                        <li class="bold nav-item"><a class="nav-link active" href="index.html">${info.nav1[siteLang]}</a></li>
-                        <li class="bold nav-item"><a class="nav-link" href="course.html">${info.nav2[siteLang]}</a></li>
-                        <li class="bold nav-item"><a class="nav-link" href="about.html">${info.nav3[siteLang]}</a></li>
-                        <li class="lang bold nav-item ">${info.lang[siteLang]}</li>
-                    </ul>
-                </div>
-            </div>
-        </nav>`
+    //             <div class="sidemenu">
+    //                 <button class="close"><i class="fas fa-times"></i></button>
+    //                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+    //                     <li class="bold nav-item"><a class="nav-link active" href="index.html">${info.nav1[siteLang]}</a></li>
+    //                     <li class="bold nav-item"><a class="nav-link" href="course.html">${info.nav2[siteLang]}</a></li>
+    //                     <li class="bold nav-item"><a class="nav-link" href="about.html">${info.nav3[siteLang]}</a></li>
+    //                     <li class="lang bold nav-item ">${info.lang[siteLang]}</li>
+    //                 </ul>
+    //             </div>
+    //         </div>
+    //     </nav>`
 
-        header?.insertAdjacentHTML('beforeend', item);
-        // lang = document.querySelector(".lang")
-        // console.log(lang);
-    })
+    //     header?.insertAdjacentHTML('beforeend', item);
+    //     // lang = document.querySelector(".lang")
+    //     // console.log(lang);
+    // })
 
 
 }
@@ -141,43 +141,43 @@ function checkActiveLink() {
 
 
 
-export const courseBageInfo = [
-    {
-        title:{
-            ar:" الكورسات الأكاديمية ",
-            en:"Academic Courses"
-        },
-        desc:{
-            ar:" استعرض جميع كورسات الهندسة وتكنولوجيا المعلومات ",
-            en:"Browse all engineering and information technology courses."
-        }
-    }
-]
+// export const courseBageInfo = [
+//     {
+//         title:{
+//             ar:" الكورسات الأكاديمية ",
+//             en:"Academic Courses"
+//         },
+//         desc:{
+//             ar:" استعرض جميع كورسات الهندسة وتكنولوجيا المعلومات ",
+//             en:"Browse all engineering and information technology courses."
+//         }
+//     }
+// ]
 
-export const levelsFormIfo = [
-    {
-        formName:{
-            ar:" تصفية الكورسات ",
-            en:"Course Clearance"
-        },
-        level:{
-            ar:" المستوى الأكاديمي ",
-            en:"Academic level"
-        },
-        levelPlace:{
-            ar:" المستوى الأكاديمي ",
-            en:"Academic level"
-        },
-        chapter:{
-            ar:" الفصل الدراسي ",
-            en:"The semester"
-        },
-        chapterPlace:{
-            ar:" الفصل الدراسي ",
-            en:"The semester"
-        }
-    }
-]
+// export const levelsFormIfo = [
+//     {
+//         formName:{
+//             ar:" تصفية الكورسات ",
+//             en:"Course Clearance"
+//         },
+//         level:{
+//             ar:" المستوى الأكاديمي ",
+//             en:"Academic level"
+//         },
+//         levelPlace:{
+//             ar:" المستوى الأكاديمي ",
+//             en:"Academic level"
+//         },
+//         chapter:{
+//             ar:" الفصل الدراسي ",
+//             en:"The semester"
+//         },
+//         chapterPlace:{
+//             ar:" الفصل الدراسي ",
+//             en:"The semester"
+//         }
+//     }
+// ]
 
 
 export const coursesData = [
@@ -200,10 +200,10 @@ export const coursesData = [
             en:"Chapter One"
         },
         link: "",
-        show:{
-            ar:" عرض الكورس ",
-            en:"Course presentation"
-        }
+        // show:{
+        //     ar:" عرض الكورس ",
+        //     en:"Course presentation"
+        // }
     },
     {
         id: "eng",
@@ -224,10 +224,10 @@ export const coursesData = [
             en:"Chapter One"
         }, 
         link: "math.html",
-        show:{
-            ar:" عرض الكورس ",
-            en:"Course presentation"
-        }
+        // show:{
+        //     ar:" عرض الكورس ",
+        //     en:"Course presentation"
+        // }
     },
     {
         id: "cs",
@@ -248,10 +248,10 @@ export const coursesData = [
             en:"Chapter One"
         },
         link: "",
-        show:{
-            ar:" عرض الكورس ",
-            en:"Course presentation"
-        }
+        // show:{
+        //     ar:" عرض الكورس ",
+        //     en:"Course presentation"
+        // }
     },
     {
         id: "eng",
@@ -272,10 +272,10 @@ export const coursesData = [
             en:"Chapter One"
         },
         link: "",
-        show:{
-            ar:" عرض الكورس ",
-            en:"Course presentation"
-        }
+        // show:{
+        //     ar:" عرض الكورس ",
+        //     en:"Course presentation"
+        // }
     },
     {
         id: "cs",
@@ -296,10 +296,10 @@ export const coursesData = [
             en:""
         },
         link: "",
-        show:{
-            ar:" عرض الكورس ",
-            en:"Course presentation"
-        }
+        // show:{
+        //     ar:" عرض الكورس ",
+        //     en:"Course presentation"
+        // }
     },
     {
         id: "eng",
@@ -320,10 +320,10 @@ export const coursesData = [
             en:""
         },
         link: "",
-        show:{
-            ar:" عرض الكورس ",
-            en:"Course presentation"
-        }
+        // show:{
+        //     ar:" عرض الكورس ",
+        //     en:"Course presentation"
+        // }
     },
     {
         id: "cs",
@@ -344,10 +344,10 @@ export const coursesData = [
             en:""
         },
         link: "",
-        show:{
-            ar:" عرض الكورس ",
-            en:"Course presentation"
-        }
+        // show:{
+        //     ar:" عرض الكورس ",
+        //     en:"Course presentation"
+        // }
     },
     {
         id: "eng",
@@ -368,10 +368,10 @@ export const coursesData = [
             en:""
         },
         link: "",
-        show:{
-            ar:" عرض الكورس ",
-            en:"Course presentation"
-        }
+        // show:{
+        //     ar:" عرض الكورس ",
+        //     en:"Course presentation"
+        // }
     },
     {
         id: "cs",
@@ -392,10 +392,10 @@ export const coursesData = [
             en:""
         },
         link: "",
-        show:{
-            ar:" عرض الكورس ",
-            en:"Course presentation"
-        }
+        // show:{
+        //     ar:" عرض الكورس ",
+        //     en:"Course presentation"
+        // }
     },
     {
         id: "eng",
@@ -416,10 +416,10 @@ export const coursesData = [
             en:""
         },
         link: "",
-        show:{
-            ar:" عرض الكورس ",
-            en:"Course presentation"
-        }
+        // show:{
+        //     ar:" عرض الكورس ",
+        //     en:"Course presentation"
+        // }
     },
     {
         id: "cs",
@@ -440,10 +440,10 @@ export const coursesData = [
             en:""
         },
         link: "",
-        show:{
-            ar:" عرض الكورس ",
-            en:"Course presentation"
-        }
+        // show:{
+        //     ar:" عرض الكورس ",
+        //     en:"Course presentation"
+        // }
     }
 ]
 

@@ -91,22 +91,22 @@ const coursesNumber = document.querySelector(".sec2 h5")
 
 import { coursesData } from "./main.js"
 import { siteLang } from "./main.js"
-import { courseBageInfo } from "./main.js"
-import { levelsFormIfo } from "./main.js"
+// import { courseBageInfo } from "./main.js"
+// import { levelsFormIfo } from "./main.js"
 
 
-const coursesNumberInfo = [
-    {
-      first:{
-        ar:"عرض",
-        en:"Offer of"
-      },
-      sec:{
-        ar:"كورس",
-        en:"courses"
-      }
-    }
-]
+// const coursesNumberInfo = [
+//     {
+//       first:{
+//         ar:"عرض",
+//         en:"Offer of"
+//       },
+//       sec:{
+//         ar:"كورس",
+//         en:"courses"
+//       }
+//     }
+// ]
 
 export function reset(){
 
@@ -122,47 +122,47 @@ export function reset(){
       levelsForm.innerHTML = ""
     }
 
-    courseBageInfo.forEach(info =>{
-      // console.log("info");
-      let item =`<div class="container courseBage my-5 mb-2">
-      <h1>${info.title[siteLang]}</h1>
-      <p>${info.desc[siteLang]}</p>
-    </div>`
+    // courseBageInfo.forEach(info =>{
+    //   // console.log("info");
+    //   let item =`<div class="container courseBage my-5 mb-2">
+    //   <h1>${info.title[siteLang]}</h1>
+    //   <p>${info.desc[siteLang]}</p>
+    // </div>`
 
-    // console.log(courseBage);
+    // // console.log(courseBage);
 
-    courseBage?.insertAdjacentHTML('beforeend', item);
-    })
+    // courseBage?.insertAdjacentHTML('beforeend', item);
+    // })
 
-    levelsFormIfo.forEach(lev =>{
-      let item = `<section class="container levelsForm sec1">
-      <form action="">
-        <!-- <i class="fa-light fa-filter"></i> -->
-        <p><i class="fa-solid fa-filter"></i>${lev.formName[siteLang]}</p>
-        <div class="row justify-content-around">
-          <div class="col contact-form">
-            <label for="">${lev.level[siteLang]}</label>
-            <input type="text" placeholder="${lev.levelPlace[siteLang]}">
-          </div>
+    // levelsFormIfo.forEach(lev =>{
+    //   let item = `<section class="container levelsForm sec1">
+    //   <form action="">
+    //     <!-- <i class="fa-light fa-filter"></i> -->
+    //     <p><i class="fa-solid fa-filter"></i>${lev.formName[siteLang]}</p>
+    //     <div class="row justify-content-around">
+    //       <div class="col contact-form">
+    //         <label for="">${lev.level[siteLang]}</label>
+    //         <input type="text" placeholder="${lev.levelPlace[siteLang]}">
+    //       </div>
 
-          <div class="col contact-form">
-            <label for="">${lev.chapter[siteLang]}</label>
-            <input type="text" placeholder="${lev.chapterPlace[siteLang]}">
-          </div>
-        </div>
-      </form>
-    </section>`
+    //       <div class="col contact-form">
+    //         <label for="">${lev.chapter[siteLang]}</label>
+    //         <input type="text" placeholder="${lev.chapterPlace[siteLang]}">
+    //       </div>
+    //     </div>
+    //   </form>
+    // </section>`
 
-    levelsForm?.insertAdjacentHTML('beforeend', item);
-    })
+    // levelsForm?.insertAdjacentHTML('beforeend', item);
+    // })
 
     // console.log(coursesData.length);
     
-    if(coursesNumber){
-      coursesNumberInfo.forEach(no =>{
-      coursesNumber.innerHTML = `${no.first[siteLang]} ${coursesData.length} ${no.sec[siteLang]}`
-    })
-    }
+    // if(coursesNumber){
+    //   coursesNumberInfo.forEach(no =>{
+    //   coursesNumber.innerHTML = `${no.first[siteLang]} ${coursesData.length} ${no.sec[siteLang]}`
+    // })
+    // }
 
     coursesData.forEach(course => {
     
@@ -177,7 +177,7 @@ export function reset(){
                 <li>${course.li1[siteLang]}</li>
                 <li>${course.li2[siteLang]}</li>
               </ul>
-              <a href="${course.link}"><button class="btn btn1 b2 f-16">${course.show[siteLang]}</button></a>
+              <a href="${course.link}"><button class="btn btn1 b2 f-16">  عرض الكورس  </button></a>
             </div>
           </div>`
           }else{
@@ -189,7 +189,7 @@ export function reset(){
                 <li>${course.li1[siteLang]}</li>
                 <li>${course.li2[siteLang]}</li>
               </ul>
-              <a href="${course.link}"><button class="btn btn1 b2 f-16">${course.show[siteLang]}</button></a>
+              <a href="${course.link}"><button class="btn btn1 b2 f-16">  عرض الكورس  </button></a>
             </div>
           </div>`
           }
