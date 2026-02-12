@@ -1,6 +1,10 @@
 const courses = document.querySelector(".sec2 .courses")
 const courseBage = document.querySelector(".courseBage")
 const levelsForm = document.querySelector(".levelsForm")
+const coursesNumber = document.querySelector(".sec2 h5")
+// console.log(coursesNumber.innerHTML);
+
+
 // console.log(courseBage);
 // console.log(levelsForm);
 // console.log(courses);
@@ -90,6 +94,20 @@ import { siteLang } from "./main.js"
 import { courseBageInfo } from "./main.js"
 import { levelsFormIfo } from "./main.js"
 
+
+const coursesNumberInfo = [
+    {
+      first:{
+        ar:"عرض",
+        en:"Offer of"
+      },
+      sec:{
+        ar:"كورس",
+        en:"courses"
+      }
+    }
+]
+
 export function reset(){
 
   if(courses){
@@ -137,6 +155,14 @@ export function reset(){
 
     levelsForm?.insertAdjacentHTML('beforeend', item);
     })
+
+    // console.log(coursesData.length);
+    
+    if(coursesNumber){
+      coursesNumberInfo.forEach(no =>{
+      coursesNumber.innerHTML = `${no.first[siteLang]} ${coursesData.length} ${no.sec[siteLang]}`
+    })
+    }
 
     coursesData.forEach(course => {
     
