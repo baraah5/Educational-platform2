@@ -114,13 +114,13 @@ export function reset(){
         courses.innerHTML = ""
     }
 
-    if(courseBage){
-      courseBage.innerHTML = ""
-    }
+    // if(courseBage){
+    //   courseBage.innerHTML = ""
+    // }
 
-    if(levelsForm){
-      levelsForm.innerHTML = ""
-    }
+    // if(levelsForm){
+    //   levelsForm.innerHTML = ""
+    // }
 
     // courseBageInfo.forEach(info =>{
     //   // console.log("info");

@@ -33,21 +33,20 @@ form {
     width: 90%;
 }
 
-.contact-form input,
-.contact-form textarea {
+.contact-form select{
     padding: 8px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    /* border-radius: 0px; */
     font-size: 16px;
-    border-radius: 14px;
+    border-radius: 10px;
     background-color: #cccccc27;
     outline: none;
     /* border: 0; */
 }
 
-input::placeholder {
+/* select::placeholder {
     color: #999;
-}
+} */
 
 .course {
     height: 250px;

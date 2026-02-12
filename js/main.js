@@ -3,7 +3,7 @@ AOS.init();
 
 
 const active = document.querySelector('.back-top')
-// let lang = document.querySelector(".lang")
+const lang = document.querySelector(".lang")
 const footer = document.querySelector("footer")
 const header = document.querySelector("header")
 
@@ -518,36 +518,36 @@ export const whyUsCards = [
 ]
 
 
-export const coursesNo = [
-    {
-        no: "+",
-        title:{
-            ar:" كورس أكاديمي ",
-            en:""
-        }
-    },
-    {
-        no: "5",
-        title:{
-            ar:" مستويات دراسية ",
-            en:""
-        }
-    },
-    {
-        no: "2",
-        title:{
-            ar:" تخصص رئيسي ",
-            en:""
-        }
-    },
-    {
-        no: "+",
-        title:{
-            ar:" درس تعليمي ",
-            en:""
-        }
-    },
-]
+// export const coursesNo = [
+//     {
+//         no: "+",
+//         title:{
+//             ar:" كورس أكاديمي ",
+//             en:""
+//         }
+//     },
+//     {
+//         no: "5",
+//         title:{
+//             ar:" مستويات دراسية ",
+//             en:""
+//         }
+//     },
+//     {
+//         no: "2",
+//         title:{
+//             ar:" تخصص رئيسي ",
+//             en:""
+//         }
+//     },
+//     {
+//         no: "+",
+//         title:{
+//             ar:" درس تعليمي ",
+//             en:""
+//         }
+//     },
+// ]
 
 export const messages = [
     {
@@ -699,49 +699,117 @@ script.reset()
 course.reset()
 about.reset()
 
+const resources = {
+  en: {
+    translation: {
+      header: {
+        head: "Academic Education Platform",
+        li1:"Home",
+        li2:"Courses",
+        li3:"About the platform"
+      },
+      index: {
+        title: "The Academic Learning Platform for Engineers",
+        title2: "Your Learning Journey Starts Here",
+        desc: "An integrated learning platform for engineering and IT students. Discover hundreds of organized academic courses specifically designed to support your learning journey.",
+        show: "Browse Courses ->",
+        learn: "Learn About Us",
+        courseNo: "Academic Course",
+        levelsNo: "Academic Levels",
+        subNo: "Major",
+        lectsNo: "Lesson",
+        whyUs: "Why Choose Our Platform?",
+        whyUsDesc: "We provide you with an integrated learning experience specifically designed for engineering and IT students",
+        whyUs1: "Organized and Comprehensive Content",
+        whyUs1desc: "All courses are organized by academic level and semester for easy access and systematic learning",
+        whyUs2: "Clear Progress and Tracking",
+        whyUs2desc: "Easily track your progress in each course with clear and visible achievement indicators",
+        whyUs3: "Designed For students",
+        whyUs3desc: "A clean and simple interface designed specifically to meet the needs of university students",
+        whyUs4: "Academic quality",
+        whyUs4desc: "Professional educational content covering all the essential subjects in the fields of engineering and information technology",
+        whyUs5: "Continuous development",
+        whyUs5desc: "We constantly update the content to keep pace with the latest developments in the engineering and technology fields",
+        whyUs6: "Smart learning",
+        whyUs6desc: "An advanced filtering system that helps you find the right course quickly and easily",
+        start: "Start your learning journey now",
+        startDesc: "Join thousands of students who are developing their academic skills through our educational platform",
+        startBtn: "Explore courses ->"
+      }
+    }
+  },
+  ar: {
+    translation: {
+      header: {
+        head: " منصة التعليم الأكاديمي ",
+        li1:" الرئيسية ",
+        li2:" الكورسات ",
+        li3:" حول المنصة "
+      },
+      index: {
+        title: " منصة التعليم الأكاديمي للمهندسين ",
+        title2:" رحلتك التعليمية تبدأ من هنا ",
+        desc:" منصة تعليمية متكاملة لطلاب الهندسة وتكنولوجيا المعلومات. اكتشف مئات الكورسات الأكاديمية المنظمة والمصممةخصيصاً لدعم مسيرتك التعليمية. ",
+        show:" تصفح الكورسات -> ",
+        learn:" تعرف علينا ",
+        courseNo:" كورس أكاديمي ",
+        levelsNo:" مستويات دراسية ",
+        subNo:" تخصص رئيسي ",
+        lectsNo:" درس تعليمي ",
+        whyUs:" لماذا تختار منصتنا؟ ",
+        whyUsDesc:"نوفر لك تجربة تعليمية متكاملة مصممة خصيصاً لطلاب الهندسة وتكنولوجيا المعلومات ",
+        whyUs1:" محتوى منظم وشامل ",
+        whyUs1desc:" جميع الكورسات منظمة حسب المستوى  الأكاديمي والفصل الدراسي لتسهيل الوصول والتعلم المنهجي ",
+        whyUs2:" تقدم واضح ومتابعة ",
+        whyUs2desc:" تتبع تقدمك في كل كورس بسهولة من خلال مؤشرات الإنجاز الواضحة والمرئية ",
+        whyUs3:" مصمم للطلاب ",
+        whyUs3desc:" واجهة نظيفة وبسيطة مصممة خصيصاً لتلبية احتياجات الطلاب الجامعيين ",
+        whyUs4:" جودة أكاديمية ",
+        whyUs4desc:" محتوى تعليمي احترافي يغطي كافة المواد الأساسية في مجالي الهندسة وتكنولوجيا المعلومات ",
+        whyUs5:" تطور مستمر ",
+        whyUs5desc:" نحدث المحتوى باستمرار لمواكبة أحدث التطورات في المجالين الهندسي والتقني ",
+        whyUs6:"تعلم ذكي ",
+        whyUs6desc:" نظام تصفية متقدم يساعدك في العثور على الكورس المناسب بسرعة وسهولة ",
+        start:"ابدأ رحلتك التعليمية الآن ",
+        startDesc:" انضم إلى آلاف الطلاب الذين يطورون مهاراتهم الأكاديمية من خلال منصتنا التعليمية ",
+        startBtn:" استكشف الكورسات -> "
+      }
+    }
+  }
+};
+
+
 // console.log(lang);
 
 // lang.onclick = ()=>{
-//     // console.log(lang);
-//         // console.log(siteLang);
 //     if(siteLang == "en"){
 //         siteLang = "ar"
 //         document.documentElement.dir = "rtl"
 //         lang.textContent = "English"
-//         script.reset()
-//         course.reset()
-//         about.reset()
-//         reset();
-//         // console.log(siteLang);
-//         // console.log(66);
 //     }else{
 //         siteLang = "en"
 //         document.documentElement.dir = "ltr"
 //         lang.textContent = "العربية"
+//     }
 //         script.reset()
 //         course.reset()
 //         about.reset()
 //         reset();
-//         // console.log(siteLang);
-//         // console.log(siteLang);
-//         // console.log(55);
-//     }
-//     // console.log(lang);
 // }
 
-document.onclick = (e)=>{
-    if(e.target.classList.contains("lang")){
-        if(siteLang == "en"){
-            siteLang = "ar"
-            document.documentElement.dir = "rtl"
-        } else {
-            siteLang = "en"
-            document.documentElement.dir = "ltr"
-        }
+// document.onclick = (e)=>{
+//     if(e.target.classList.contains("lang")){
+//         if(siteLang == "en"){
+//             siteLang = "ar"
+//             document.documentElement.dir = "rtl"
+//         } else {
+//             siteLang = "en"
+//             document.documentElement.dir = "ltr"
+//         }
 
-        script.reset()
-        course.reset()
-        about.reset()
-        reset()
-    }
-}
+//         script.reset()
+//         course.reset()
+//         about.reset()
+//         reset()
+//     }
+// }

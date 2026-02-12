@@ -16,7 +16,7 @@
   <header>
     <nav class="navbar fixed-top border-bottom navbar-expand-lg bg-body-tertiary">
       <div class="container-fluid">
-        <a class="nav-link f-20 bold" href="#"><i class="f-27 fa-solid fa-book" style="color: #4F39F6;"></i> منصة
+        <a data-i18n="header.head" class="nav-link f-20 bold" href="#"><i class="f-27 fa-solid fa-book" style="color: #4F39F6;"></i> منصة
           التعليم الأكاديمي </a>
 
           <div class="menu">
@@ -26,9 +26,9 @@
         <div class="sidemenu">
           <button class="close"><i class="fas fa-times"></i></button>
           <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-            <li class="bold nav-item"><a class="nav-link" href="index.html"> الرئيسية </a></li>
-            <li class="bold nav-item"><a class="nav-link" href="course.html"> الكورسات </a></li>
-            <li class="bold nav-item"><a class="nav-link" href="about.html"> حول المنصة </a></li>
+            <li class="bold nav-item"><a data-i18n="header.li1" class="nav-link" href="index.html"> الرئيسية </a></li>
+            <li class="bold nav-item"><a data-i18n="header.li2" class="nav-link" href="course.html"> الكورسات </a></li>
+            <li class="bold nav-item"><a data-i18n="header.li3" class="nav-link" href="about.html"> حول المنصة </a></li>
             <li class="lang bold nav-item ">English</li>
           </ul>
         </div>
@@ -37,23 +37,32 @@
   </header>
 
   <main>
-    <div class="container-fluid courseBage my-5 mb-2">
-      <h1> الكورسات الأكاديمية </h1>
-      <p> استعرض جميع كورسات الهندسة وتكنولوجيا المعلومات </p>
+    <div class="container courseBage my-5 mb-2">
+      <h1 data-i18n="course.title"> الكورسات الأكاديمية </h1>
+      <p data-i18n="course.desc"> استعرض جميع كورسات الهندسة وتكنولوجيا المعلومات </p>
     </div>
 
-    <section class="container-fluid levelsForm sec1">
-      <form action="">=
-        <p><i class="fa-solid fa-filter"></i> تصفية الكورسات </p>
+    <section class="container levelsForm sec1">
+      <form action="">
+        <p data-i18n="course.formTitle"><i class="fa-solid fa-filter"></i> تصفية الكورسات </p>
         <div class="row justify-content-around">
           <div class="col contact-form">
-            <label for=""> المستوى الأكاديمي </label>
-            <input type="text" placeholder=" المستوى الأكاديمي ">
+            <label data-i18n="course.formSelec1" for=""> المستوى الأكاديمي </label>
+            <!-- <input type="text" placeholder=" المستوى الأكاديمي "> -->
+             <select id="levels" name="levels">
+                <option data-i18n="course.formSelec1lev" value="level1"> المستوى الأول </option>
+                <option data-i18n="course.formSelec2lev" value="level2"> المستوى الثاني </option>
+                <option data-i18n="course.formSelec3lev" value="level3"> المستوى الثالث </option>
+            </select>
           </div>
 
           <div class="col contact-form">
-            <label for=""> الفصل الدراسي </label>
-            <input type="text" placeholder=" الفصل الدراسي ">
+            <label data-i18n="course.formSelec2" for=""> الفصل الدراسي </label>
+            <!-- <input type="text" placeholder=" الفصل الدراسي "> -->
+             <select id="seasons" name="seasons">
+                <option data-i18n="course.formSelec2seas" value="season1"> الفصل الأول </option>
+                <option data-i18n="course.formSelec2seas" value="season2"> الفصل الثاني </option>
+            </select>
           </div>
         </div>
       </form>
@@ -61,7 +70,7 @@
 
     <section class="container my-5 sec2">
       <!-- code js !!!!!!!!!!! -->
-      <h5 class="my-5 bold"> عرض 12 كورس </h5>
+      <h5 data-i18n="course.courseNo" class="my-5 bold"> عرض <span></span> كورس </h5>
       <div class="row courses">
         <!-- <div class="col-lg-4 col-md-6 mb-4">
           <div class="course">
