@@ -112,6 +112,7 @@ export function reset(){
 
   if(courses){
         courses.innerHTML = ""
+        // console.log(siteLang);
     }
 
     // if(courseBage){

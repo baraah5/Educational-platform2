@@ -1,4 +1,4 @@
-AOS.init();
+﻿AOS.init();
 
 
 
@@ -735,6 +735,18 @@ const resources = {
         start: "Start your learning journey now",
         startDesc: "Join thousands of students who are developing their academic skills through our educational platform",
         startBtn: "Explore courses ->"
+      },
+      course: {
+        title: "Academic Courses",
+        desc: "Browse all engineering and information technology courses",
+        formTitle: "Filter Courses",
+        formSelec1: "Academic Level",
+        formSelec1lev: "Level One",
+        formSelec2lev: "Level Two",
+        formSelec3lev: "Level Three",
+        formSelec2: "Semester",
+        formSelec2seas: "First Semester",
+        courseNo: "Showing Courses"
       }
     }
   },
@@ -773,10 +785,91 @@ const resources = {
         start:"ابدأ رحلتك التعليمية الآن ",
         startDesc:" انضم إلى آلاف الطلاب الذين يطورون مهاراتهم الأكاديمية من خلال منصتنا التعليمية ",
         startBtn:" استكشف الكورسات -> "
+      },
+      course: {
+        title: "الكورسات الأكاديمية",
+        desc: "استعرض جميع كورسات الهندسة وتكنولوجيا المعلومات",
+        formTitle: "تصفية الكورسات",
+        formSelec1: "المستوى الأكاديمي",
+        formSelec1lev: "المستوى الأول",
+        formSelec2lev: "المستوى الثاني",
+        formSelec3lev: "المستوى الثالث",
+        formSelec2: "الفصل الدراسي",
+        formSelec2seas: "الفصل الأول",
+        courseNo: "عرض كورس"
       }
     }
   }
 };
+
+
+lang.onclick = () => {
+
+    const currentLang = i18next.language;
+    const newLang = currentLang === "en" ? "ar" : "en";
+    siteLang = newLang
+
+    i18next.changeLanguage(newLang, () => {
+
+        updateContent(); // ترجمة العناصر
+
+        document.documentElement.dir = newLang === "ar" ? "rtl" : "ltr";
+        document.documentElement.lang = newLang;
+
+        lang.textContent = newLang === "ar" ? "English" : "العربية";
+
+        localStorage.setItem("lang", newLang);
+
+        // إذا فعلاً عندك reset functions
+        // script?.reset?.();
+        // course?.reset?.();
+        // about?.reset?.();
+        // reset?.();
+
+        script.reset()
+        course.reset()
+        about.reset()
+
+
+    });
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const savedLang = localStorage.getItem("lang") || "en";
+
+  i18next.init({
+    lng: savedLang,
+    debug: false,
+    resources
+  }, () => {
+    updateContent();
+    applyDirection(savedLang);
+  });
+
+});
+
+function updateContent() {
+  document.querySelectorAll("[data-i18n]").forEach(el => {
+    const key = el.getAttribute("data-i18n");
+    el.textContent = i18next.t(key);
+  });
+}
+
+function changeLang(lang) {
+  i18next.changeLanguage(lang, () => {
+    updateContent();
+    applyDirection(lang);
+    localStorage.setItem("lang", lang);
+  });
+}
+
+
+function applyDirection(lang) {
+  document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
+  document.documentElement.lang = lang;
+}
+
 
 
 // console.log(lang);
