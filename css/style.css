@@ -1,4 +1,4 @@
-
+﻿
 .title {
     width: fit-content;
     border: 1px solid #ddd;
@@ -17,7 +17,7 @@
 .btn1 {
     /* width: 197; */
     /* height: 60; */
-    margin-inline-start: 15px;
+    margin-inline-end: 15px;
     transition: all 0.5s ease;
     background-color: white;
     color: #4F39F6;
@@ -232,6 +232,10 @@
         font-size: 30px;
     }
 
+    .title{
+        /* font-size: 13px; */
+    }
+
     .hero4 .btn{
         font-size: 16px;
         padding: 15px 15px;
@@ -241,3 +245,22 @@
         font-size: 16px;
     }
 }
+
+@media (max-width: 500px) {
+    .title{
+        font-size: 11px;
+    }
+
+    .navbar span{
+        font-size: 18px;
+    }
+
+    .hero a button{
+        font-size: 13px;
+        padding: 10px 15px;
+        margin-inline-end: 5px;
+    }
+
+
+}
+

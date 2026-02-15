@@ -863,7 +863,7 @@ const resources = {
         formSelec3lev: "المستوى الثالث",
         formSelec2: "الفصل الدراسي",
         formSelec2seas: "الفصل الأول",
-        courseNo: "عرض كورس",
+        courseNo: "عرض الكورسات",
         showBtn: "عرض الكورس"
       },
       CoursePresentationn: {
