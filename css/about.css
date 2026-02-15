@@ -44,6 +44,18 @@
     transition: all 0.3s ease-in-out;
 }
 
+.message .icon,
+.whyUs .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message .icon i,
+.whyUs .icon i {
+    padding: 0;
+}
+
 .message:hover {
     transform: translateY(-10px);
     transition: all 0.3s ease-in-out;

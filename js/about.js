@@ -15,70 +15,70 @@ const whatWeDo = document.querySelector(".container .whatWeDo")
 //     },
 // ]
 
-import { messages } from "./main.js"
-import { valuables } from "./main.js"
-import { whatWeDos } from "./main.js"
-import { siteLang } from "./main.js"
+// import { messages } from "./main.js"
+// import { valuables } from "./main.js"
+// import { whatWeDos } from "./main.js"
+// import { siteLang } from "./main.js"
 
 export function reset(){
 
-    if(whatWeDo){
-        whatWeDo.innerHTML = ""
-    }
+    // if(whatWeDo){
+    //     whatWeDo.innerHTML = ""
+    // }
 
-    if(valuable){
-        valuable.innerHTML = ""
-    }
+    // if(valuable){
+    //     valuable.innerHTML = ""
+    // }
 
-    if(message){
-        message.innerHTML = ""
-    }
+    // if(message){
+    //     message.innerHTML = ""
+    // }
 
-    messages.forEach(msg => {
-        // console.log(lang);
-        // console.log(msg.title[siteLang]);
-        let item = `<div class="col-md-6 col-lg-6 my-3  ">
-                            <div class="message  ">
-                                <div class="icon ico2 pb-2"><i class="${msg.icon}"></i></div>
-                                <h3 class="bold pb-2">${msg.title[siteLang]}</h3>
-                                <p>${msg.desc[siteLang]}</p>
-                            </div>
-                        </div>`
-        message?.insertAdjacentHTML('beforeend', item);
-    })
+    // messages.forEach(msg => {
+    //     // console.log(lang);
+    //     // console.log(msg.title[siteLang]);
+    //     let item = `<div class="col-md-6 col-lg-6 my-3  ">
+    //                         <div class="message  ">
+    //                             <div class="icon ico2 pb-2"><i class="${msg.icon}"></i></div>
+    //                             <h3 class="bold pb-2">${msg.title[siteLang]}</h3>
+    //                             <p>${msg.desc[siteLang]}</p>
+    //                         </div>
+    //                     </div>`
+    //     message?.insertAdjacentHTML('beforeend', item);
+    // })
 
-    valuables.forEach(val => {
-        let item = `<div class="col-lg-4 col-md-6 mb-4">
-                            <div class="whyUs">
-                                <div class="icon icon3 pb-4"><i class="${val.icon}"></i></div>
-                                <h5 class="pb-2 bold">${val.title[siteLang]}</h5>
-                                <p>${val.desc[siteLang]}</p>
-                            </div>
-                        </div>`
-        valuable?.insertAdjacentHTML('beforeend', item);
-    })   
+    // valuables.forEach(val => {
+    //     let item = `<div class="col-lg-4 col-md-6 mb-4">
+    //                         <div class="whyUs">
+    //                             <div class="icon icon3 pb-4"><i class="${val.icon}"></i></div>
+    //                             <h5 class="pb-2 bold">${val.title[siteLang]}</h5>
+    //                             <p>${val.desc[siteLang]}</p>
+    //                         </div>
+    //                     </div>`
+    //     valuable?.insertAdjacentHTML('beforeend', item);
+    // })   
     
-    whatWeDos.forEach(wwd => {
-        let item = ``
-        if(wwd.no % 2 === 0){
-            item = `<div class="col-md-1 pb-3 text-center">
-                            <div class="count even">${wwd.no}</div>
-                        </div>
-                        <div class="col-md-11 pb-4">
-                            <h5>${wwd.title[siteLang]}</h5>
-                            <p>${wwd.desc[siteLang]}</p>
-                        </div>`
-        }else{
-            item = `<div class="col-md-1 pb-3 text-center">
-                            <div class="count">${wwd.no}</div>
-                        </div>
-                        <div class="col-md-11 pb-4">
-                            <h5>${wwd.title[siteLang]}</h5>
-                            <p>${wwd.desc[siteLang]}</p>
-                        </div>`
-        }
-        whatWeDo?.insertAdjacentHTML('beforeend', item);
-    })   
+    // whatWeDos.forEach(wwd => {
+    //     let item = ``
+    //     if(wwd.no % 2 === 0){
+    //         item = `<div class="col-md-1 pb-3 text-center">
+    //                         <div class="count even">${wwd.no}</div>
+    //                     </div>
+    //                     <div class="col-md-11 pb-4">
+    //                         <h5>${wwd.title[siteLang]}</h5>
+    //                         <p>${wwd.desc[siteLang]}</p>
+    //                     </div>`
+    //     }else{
+    //         item = `<div class="col-md-1 pb-3 text-center">
+    //                         <div class="count">${wwd.no}</div>
+    //                     </div>
+    //                     <div class="col-md-11 pb-4">
+    //                         <h5>${wwd.title[siteLang]}</h5>
+    //                         <p>${wwd.desc[siteLang]}</p>
+    //                     </div>`
+    //     }
+    //     whatWeDo?.insertAdjacentHTML('beforeend', item);
+    // })   
 
 }
 

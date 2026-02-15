@@ -22,7 +22,7 @@ const coursesNumber = document.querySelector(".sec2 h5")
 //         name: " الرياضيات الهندسية ",
 //         li1: " المستوى الأول ",
 //         li2: " الفصل الأول ", 
-//         link: "math.html"
+//         link: "CoursePresentationn.html"
 //     },
 //     {
 //         id: "cs",
@@ -165,6 +165,8 @@ export function reset(){
     // })
     // }
 
+    const showCourseText = window.i18next ? i18next.t("course.showBtn") : "عرض الكورس";
+
     coursesData.forEach(course => {
     
       // console.log(siteLang);
@@ -178,7 +180,7 @@ export function reset(){
                 <li>${course.li1[siteLang]}</li>
                 <li>${course.li2[siteLang]}</li>
               </ul>
-              <a href="${course.link}"><button class="btn btn1 b2 f-16">  عرض الكورس  </button></a>
+              <a href="${course.link}"><button class="btn btn1 b2 f-16">${showCourseText}</button></a>
             </div>
           </div>`
           }else{
@@ -190,7 +192,7 @@ export function reset(){
                 <li>${course.li1[siteLang]}</li>
                 <li>${course.li2[siteLang]}</li>
               </ul>
-              <a href="${course.link}"><button class="btn btn1 b2 f-16">  عرض الكورس  </button></a>
+              <a href="${course.link}"><button class="btn btn1 b2 f-16">${showCourseText}</button></a>
             </div>
           </div>`
           }

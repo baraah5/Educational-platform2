@@ -8,19 +8,19 @@ const lect = document.querySelector(".container .lect")
 //   generateUsers();
 // }
 
-const lects = [
-    {
-        name: " الرياضيات الهندسية ",
-        desc: " يغطي هذا الكورس المفاهيم الرياضية الأساسية اللازمة للطلاب الهندسيين، بما في ذلك التفاضل، التكامل، والمعادلات التفاضلية. التركيز على التطبيقات الهندسية العملية. ",
-        lects: [
-            {
-                no: 1,
-                title: " مراجعة الجبر والدوال ",
-                vidio: "https://www.youtube.com/embed/1QHqj8u9n2c"
-            },
-        ]
-    },
-]
+// const lects = [
+//     {
+//         name: " الرياضيات الهندسية ",
+//         desc: " يغطي هذا الكورس المفاهيم الرياضية الأساسية اللازمة للطلاب الهندسيين، بما في ذلك التفاضل، التكامل، والمعادلات التفاضلية. التركيز على التطبيقات الهندسية العملية. ",
+//         lects: [
+//             {
+//                 no: 1,
+//                 title: " مراجعة الجبر والدوال ",
+//                 vidio: "https://www.youtube.com/embed/1QHqj8u9n2c"
+//             },
+//         ]
+//     },
+// ]
 
 
 let done = document.querySelectorAll(".sec4 .m-3")
@@ -29,7 +29,7 @@ let done = document.querySelectorAll(".sec4 .m-3")
 
 // const Viewed = JSON.parse(localStorage.getItem("Viewed")) || []
 const Viewed = document.querySelector(".sec3 .done")
-let lecturesViewed = document.querySelector(".cont h5")
+const lecturesViewed = document.querySelector(".cont .view-count")
 const ViewedPercent = document.querySelector(".sec3 p span")
 // console.log(Viewed.style.width.value);
 
@@ -73,7 +73,9 @@ lecturesDone.forEach((lect) => {
 const length = done.length
 // console.log(length);
 let view = lecturesDone.length
-lecturesViewed.innerHTML = ` ${view}/${length} درس `
+if (lecturesViewed) {
+    lecturesViewed.textContent = `${view}/${length}`
+}
 ViewedPercent.innerHTML = `${Math.ceil((view / length) * 100)}`
 Viewed.style.width = `${ViewedPercent.innerHTML}%`;
 
@@ -105,7 +107,9 @@ done.forEach((el) => {
             // done = done.map((lect) => lect == el ? el : lect)
             view--
         }
-        lecturesViewed.innerHTML = ` ${view}/${length} درس `
+        if (lecturesViewed) {
+            lecturesViewed.textContent = `${view}/${length}`
+        }
         ViewedPercent.innerHTML = `${Math.ceil((view / length) * 100)}`
         Viewed.style.width = `${ViewedPercent.innerHTML}%`;
         console.log(view);

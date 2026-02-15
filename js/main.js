@@ -8,7 +8,7 @@ const footer = document.querySelector("footer")
 const header = document.querySelector("header")
 
 // console.log(lang);
-export let siteLang = document.documentElement.lang;
+export let siteLang = localStorage.getItem("lang") || document.documentElement.lang || "en";
 
 
 
@@ -223,7 +223,7 @@ export const coursesData = [
             ar:" الفصل الأول ",
             en:"Chapter One"
         }, 
-        link: "math.html",
+        link: "CoursePresentationn.html",
         // show:{
         //     ar:" عرض الكورس ",
         //     en:"Course presentation"
@@ -708,6 +708,9 @@ const resources = {
         li2:"Courses",
         li3:"About the platform"
       },
+      footer: {
+        copy: "Academic Education Platform ©2026 All rights reserved"
+      },
       index: {
         title: "The Academic Learning Platform for Engineers",
         title2: "Your Learning Journey Starts Here",
@@ -746,7 +749,68 @@ const resources = {
         formSelec3lev: "Level Three",
         formSelec2: "Semester",
         formSelec2seas: "First Semester",
-        courseNo: "Showing Courses"
+        courseNo: "Showing Courses",
+        showBtn: "Show Course"
+      },
+      CoursePresentationn: {
+        pageTitle: "Engineering Mathematics",
+        back: "<- Back to Courses",
+        breadcrumb1: "Engineering",
+        breadcrumb2: "Level One",
+        breadcrumb3: "First Semester",
+        title: "Engineering Mathematics",
+        desc: "This course covers the core mathematical concepts required for engineering students, including calculus, integration, and differential equations, with a focus on practical engineering applications.",
+        progressTitle: "Course Progress",
+        lessonWord: "Lesson",
+        completed: "Completed",
+        lessonsTitle: "Lessons List",
+        lesson1: "Algebra and Functions Review",
+        lesson2: "Limits and Continuity",
+        lesson3: "Differentiation - Basic Rules",
+        lesson4: "Applications of Differentiation in Engineering",
+        lesson5: "Implicit Differentiation and Related Rates",
+        lesson6: "Indefinite Integration",
+        lesson7: "Definite Integration and Areas",
+        lesson8: "Integration Techniques",
+        lesson9: "Engineering Applications of Integration",
+        lesson10: "First-Order Differential Equations",
+        lesson11: "Second-Order Differential Equations",
+        lesson12: "Comprehensive Review"
+      },
+      about: {
+        pageTitle: "About Us",
+        heroTitle: "About The Academic Education Platform",
+        heroDesc: "A specialized educational platform aimed at supporting engineering and information technology students throughout their academic journey with organized and comprehensive content.",
+        message1Title: "Our Mission",
+        message1Desc: "We strive to provide an integrated digital learning environment that helps university students in engineering and information technology access organized, high-quality academic content, enhancing their educational experience and supporting academic excellence.",
+        message2Title: "Our Vision",
+        message2Desc: "To be the leading educational platform in the Arab world for engineering and information technology students, and to contribute to building a generation of qualified engineers and technicians capable of facing future challenges and driving innovation in their fields.",
+        valuesTitle: "Our Core Values",
+        valuesDesc: "The principles we believe in and that guide our daily work",
+        value1Title: "Academic Quality",
+        value1Desc: "We put students' needs first and design a learning experience that fits their requirements",
+        value2Title: "Student Focus",
+        value2Desc: "A clean and simple interface specifically designed to meet university students' needs",
+        value3Title: "Continuous Improvement",
+        value3Desc: "We continuously improve our platform and content to keep pace with the latest technical and academic developments",
+        value4Title: "Organization and Clarity",
+        value4Desc: "We present content in an organized and clear way that makes learning and information access easier",
+        value5Title: "Innovation",
+        value5Desc: "We encourage creative thinking and innovation in delivering educational solutions",
+        value6Title: "Excellence",
+        value6Desc: "We strive for excellence in every aspect of the platform and the services we provide",
+        offerTitle: "What Do We Offer?",
+        offer1Title: "Comprehensive Academic Courses",
+        offer1Desc: "We cover all core subjects in engineering and information technology across academic levels, from first to fifth level.",
+        offer2Title: "Clear and Methodical Organization",
+        offer2Desc: "All courses are organized by specialization, academic level, and semester, making it easy for students to quickly find what they need.",
+        offer3Title: "Simple User Interface",
+        offer3Desc: "A simple interface is clear and easy to learn, focused on essentials only, enabling users to complete tasks quickly with minimal effort and without unnecessary complexity.",
+        offer4Title: "Study Progress Tracking",
+        offer4Desc: "We provide a clear visual system to track your progress in each course, helping you stay organized and motivated throughout your learning journey.",
+        ctaTitle: "Are You Ready To Start?",
+        ctaDesc: "Join us today and explore a world of organized academic knowledge",
+        footer: "Academic Education Platform ©2026 All rights reserved"
       }
     }
   },
@@ -757,6 +821,9 @@ const resources = {
         li1:" الرئيسية ",
         li2:" الكورسات ",
         li3:" حول المنصة "
+      },
+      footer: {
+        copy: "منصة التعليم الأكاديمي ©2026 جميع الحقوق محفوظة"
       },
       index: {
         title: " منصة التعليم الأكاديمي للمهندسين ",
@@ -796,7 +863,68 @@ const resources = {
         formSelec3lev: "المستوى الثالث",
         formSelec2: "الفصل الدراسي",
         formSelec2seas: "الفصل الأول",
-        courseNo: "عرض كورس"
+        courseNo: "عرض كورس",
+        showBtn: "عرض الكورس"
+      },
+      CoursePresentationn: {
+        pageTitle: "الرياضيات الهندسية",
+        back: "<- العودة إلى الكورسات",
+        breadcrumb1: "الهندسة",
+        breadcrumb2: "المستوى الأول",
+        breadcrumb3: "الفصل الأول",
+        title: "الرياضيات الهندسية",
+        desc: "يغطي هذا الكورس المفاهيم الرياضية الأساسية اللازمة للطلاب الهندسيين، بما في ذلك التفاضل، التكامل، والمعادلات التفاضلية. التركيز على التطبيقات الهندسية العملية.",
+        progressTitle: "التقدم في الكورس",
+        lessonWord: "درس",
+        completed: "مكتمل",
+        lessonsTitle: "قائمة الدروس",
+        lesson1: "مراجعة الجبر والدوال",
+        lesson2: "النهايات والاتصال",
+        lesson3: "التفاضل - القواعد الأساسية",
+        lesson4: "تطبيقات التفاضل في الهندسة",
+        lesson5: "التفاضل الضمني والمتعلقات",
+        lesson6: "التكامل غير المحدود",
+        lesson7: "التكامل المحدود والمساحات",
+        lesson8: "تقنيات التكامل",
+        lesson9: "تطبيقات التكامل الهندسية",
+        lesson10: "المعادلات التفاضلية من الدرجة الأولى",
+        lesson11: "المعادلات التفاضلية من الدرجة الثانية",
+        lesson12: "مراجعة شاملة"
+      },
+      about: {
+        pageTitle: "حول المنصة",
+        heroTitle: "حول منصة التعليم الأكاديمي",
+        heroDesc: "منصة تعليمية متخصصة تهدف إلى دعم طلاب الهندسة وتكنولوجيا المعلومات في رحلتهم الأكاديمية من خلال محتوى منظم وشامل",
+        message1Title: "رسالتنا",
+        message1Desc: "نسعى لتوفير بيئة تعليمية رقمية متكاملة تساعد طلاب الجامعات في مجالي الهندسة وتكنولوجيا المعلومات على الوصول إلى محتوى أكاديمي منظم وعالي الجودة، مما يعزز من تجربتهم التعليمية ويساهم في تحقيق التميز الأكاديمي.",
+        message2Title: "رؤيتنا",
+        message2Desc: "أن نكون المنصة التعليمية الرائدة في العالم العربي لطلاب الهندسة وتكنولوجيا المعلومات، ونساهم في بناء جيل من المهندسين والتقنيين المؤهلين القادرين على مواجهة تحديات المستقبل وقيادة الابتكار في مجالاتهم.",
+        valuesTitle: "قيمنا الأساسية",
+        valuesDesc: "المبادئ التي نؤمن بها وتوجه عملنا اليومي",
+        value1Title: "الجودة الأكاديمية",
+        value1Desc: "نضع احتياجات الطلاب في المقام الأول ونصمم تجربة تعليمية تناسب متطلباتهم",
+        value2Title: "التركيز على الطالب",
+        value2Desc: "واجهة نظيفة وبسيطة مصممة خصيصاً لتلبية احتياجات الطلاب الجامعيين",
+        value3Title: "التطوير المستمر",
+        value3Desc: "نسعى دائماً لتحسين منصتنا ومحتوانا لمواكبة أحدث التطورات التقنية والأكاديمية",
+        value4Title: "التنظيم والوضوح",
+        value4Desc: "نقدم المحتوى بطريقة منظمة وواضحة تسهل عملية التعلم والوصول للمعلومات",
+        value5Title: "الابتكار",
+        value5Desc: "نشجع التفكير الإبداعي والابتكار في تقديم الحلول التعليمية",
+        value6Title: "التميز",
+        value6Desc: "نسعى لتحقيق التميز في كل جانب من جوانب المنصة والخدمات المقدمة",
+        offerTitle: "ماذا نقدم؟",
+        offer1Title: "كورسات أكاديمية شاملة",
+        offer1Desc: "نغطي جميع المواد الأساسية في مجالي الهندسة وتكنولوجيا المعلومات عبر المستويات الدراسية المختلفة من المستوى الأول حتى المستوى الخامس.",
+        offer2Title: "تنظيم واضح ومنهجي",
+        offer2Desc: "جميع الكورسات منظمة حسب التخصص، المستوى الأكاديمي، والفصل الدراسي، مما يسهل على الطلاب العثور على ما يحتاجونه بسرعة.",
+        offer3Title: "واجهة استخدام بسيطة",
+        offer3Desc: "واجهة استخدام بسيطة هي واجهة واضحة وسهلة التعلم، تركز على الأساسيات فقط، وتُمكّن المستخدم من إنجاز مهامه بسرعة وبأقل جهد ممكن، دون تعقيد أو عناصر غير ضرورية.",
+        offer4Title: "متابعة التقدم الدراسي",
+        offer4Desc: "نوفر نظام مرئي واضح لمتابعة تقدمك في كل كورس، مما يساعدك على البقاء منظماً ومتحفزاً طوال رحلتك التعليمية.",
+        ctaTitle: "هل أنت مستعد للبدء؟",
+        ctaDesc: "انضم إلينا اليوم واستكشف عالماً من المعرفة الأكاديمية المنظمة",
+        footer: "منصة التعليم الأكاديمي ©2026 جميع الحقوق محفوظة"
       }
     }
   }
@@ -829,6 +957,7 @@ lang.onclick = () => {
         script.reset()
         course.reset()
         about.reset()
+        side.classList.remove('open')
 
 
     });
@@ -837,6 +966,7 @@ lang.onclick = () => {
 document.addEventListener("DOMContentLoaded", () => {
 
   const savedLang = localStorage.getItem("lang") || "en";
+  siteLang = savedLang;
 
   i18next.init({
     lng: savedLang,
@@ -845,6 +975,12 @@ document.addEventListener("DOMContentLoaded", () => {
   }, () => {
     updateContent();
     applyDirection(savedLang);
+    if (lang) {
+      lang.textContent = savedLang === "ar" ? "English" : "العربية";
+    }
+    script.reset();
+    course.reset();
+    about.reset();
   });
 
 });
