@@ -335,6 +335,14 @@ footer {
         padding-inline: 8px;
     }
 
+    /* .title{
+        font-size: 11px;
+    } */
+
+    .navbar span{
+        font-size: 18px;
+    }
+
     .menu button {
         padding: 4px 8px 1px 8px;
     }
