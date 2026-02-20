@@ -1,5 +1,5 @@
-const sec1 = document.querySelector(".sec2");
-const lects = document.querySelector(".sec4");
+﻿const sec1 = document.querySelector(".js.sec2");
+const lects = document.querySelector(".js.sec4");
 
 import { coursesData } from "./main.js";
 import { siteLang } from "./main.js";
