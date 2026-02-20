@@ -93,6 +93,26 @@ import { coursesData } from "./main.js"
 import { siteLang } from "./main.js"
 // import { courseBageInfo } from "./main.js"
 // import { levelsFormIfo } from "./main.js"
+const SELECTED_COURSE_KEY = "selectedCourseId";
+
+function getLocalizedValue(value, lang) {
+  if (value && typeof value === "object") {
+    const preferred = value[lang];
+    if (typeof preferred === "string" && preferred.trim() !== "") {
+      return preferred;
+    }
+    const fallbackAr = value.ar;
+    if (typeof fallbackAr === "string" && fallbackAr.trim() !== "") {
+      return fallbackAr;
+    }
+    const fallbackEn = value.en;
+    if (typeof fallbackEn === "string" && fallbackEn.trim() !== "") {
+      return fallbackEn;
+    }
+    return "";
+  }
+  return value ?? "";
+}
 
 
 // const coursesNumberInfo = [
@@ -171,28 +191,36 @@ export function reset(){
     
       // console.log(siteLang);
           let item = ``
-          if(course.id === "cs"){
+          const facultyClass = course.faculty === "cs" ? "cs" : "eng";
+          const courseTitle = getLocalizedValue(course.title ?? course.name, siteLang);
+          const courseLevel = getLocalizedValue(course.level ?? course.li1, siteLang);
+          const courseSemester = getLocalizedValue(course.semester ?? course.li2, siteLang);
+          const baseCourseLink = course.link || "CoursePresentationn.html";
+          const separator = baseCourseLink.includes("?") ? "&" : "?";
+          const courseLink = `${baseCourseLink}${separator}course=${encodeURIComponent(course.id)}`;
+
+          if(facultyClass === "cs"){
               item = `<div class="col-lg-4 col-md-6 mb-4">
             <div class="course">
               <div class="title cs px-3 py-2">${course.idName[siteLang]}</div>
-              <h5 class="pb-2 bold">${course.name[siteLang]}</h5>
+              <h5 class="pb-2 bold">${courseTitle}</h5>
               <ul>
-                <li>${course.li1[siteLang]}</li>
-                <li>${course.li2[siteLang]}</li>
+                <li>${courseLevel}</li>
+                <li>${courseSemester}</li>
               </ul>
-              <a href="${course.link}"><button class="btn btn1 b2 f-16">${showCourseText}</button></a>
+              <a data-course-id="${course.id}" href="${courseLink}"><button class="btn btn1 b2 f-16">${showCourseText}</button></a>
             </div>
           </div>`
           }else{
               item = `<div class="col-lg-4 col-md-6 mb-4">
             <div class="course">
               <div class="title eng px-3 py-2">${course.idName[siteLang]}</div>
-              <h5 class="pb-2 bold">${course.name[siteLang]}</h5>
+              <h5 class="pb-2 bold">${courseTitle}</h5>
               <ul>
-                <li>${course.li1[siteLang]}</li>
-                <li>${course.li2[siteLang]}</li>
+                <li>${courseLevel}</li>
+                <li>${courseSemester}</li>
               </ul>
-              <a href="${course.link}"><button class="btn btn1 b2 f-16">${showCourseText}</button></a>
+              <a data-course-id="${course.id}" href="${courseLink}"><button class="btn btn1 b2 f-16">${showCourseText}</button></a>
             </div>
           </div>`
           }
@@ -201,6 +229,20 @@ export function reset(){
       
       
   })
+
+  if (courses && !courses.dataset.selectionBound) {
+    courses.addEventListener("click", (event) => {
+      const link = event.target.closest("a[data-course-id]");
+      if (!link) {
+        return;
+      }
+      const selectedCourseId = link.getAttribute("data-course-id");
+      if (selectedCourseId) {
+        localStorage.setItem(SELECTED_COURSE_KEY, selectedCourseId);
+      }
+    });
+    courses.dataset.selectionBound = "1";
+  }
 }
 
 // reset();
