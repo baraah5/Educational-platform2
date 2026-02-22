@@ -64,188 +64,188 @@ export const coursesData = [
             ar:"قسم الحوسبة",
             en:"Computer Science"
         },
-    title: { ar: "مقدمة في هندسة البرمجيات", en: "مقدمة في هندسة البرمجيات" },
+    title: { ar: "مقدمة في هندسة البرمجيات", en: "Introduction to Software Engineering" },
     faculty: "cs",
     level: {
             ar:"المستوى الثاني",
-            en:"المستوى الثاني"
+            en:"Second Level"
         },
     semester: {
             ar:"الفصل الأول",
-            en:"الفصل الأول"
+            en:"First Semester"
         },
     description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
     lectures: [
       {
         id: "eng-211-l1",
-        title: { ar: "مقدمة الكورس", en: "مقدمة الكورس" },
+        title: { ar: "مقدمة الكورس", en: "Course Introduction" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL: "https://youtu.be/aZcUoPaEuoM?si=14P4z7TYBOu6Yw29",
       },
       {
         id: "eng-211-l2",
-        title: { ar: "تطوير البرامج المهنية و التمهيدية", en: "تطوير البرامج المهنية و التمهيدية" },
+        title: { ar: "تطوير البرامج المهنية و التمهيدية", en: "Introductory and Professional Software Development" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "https://www.youtube.com/watch?v=dTomNirU-Jw&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=2",
       },
       {
         id: "eng-211-l3",
-        title: { ar: "هندسة البرمجيات", en: "هندسة البرمجيات" },
+        title: { ar: "هندسة البرمجيات", en: "Software Engineering" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "https://www.youtube.com/watch?v=dTomNirU-Jw&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=2",
       },
       {
         id: "eng-211-l4",
-        title: { ar: "أساسيات هندسة البرمجيات", en: "أساسيات هندسة البرمجيات" },
+        title: { ar: "أساسيات هندسة البرمجيات", en: "Software Engineering Fundamentals" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "https://www.youtube.com/watch?v=qDOz-eK901Y&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=4",
       },
       {
         id: "eng-211-l5",
-        title: { ar: "دراسة الحالة", en: "دراسة الحالة" },
+        title: { ar: "دراسة الحالة", en: "Case Study" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "https://www.youtube.com/watch?v=V_dv3N-ZouI&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=6",
       },
       {
         id: "eng-211-l6",
-        title: { ar: "محطة الطقس البرية", en: "محطة الطقس البرية" },
+        title: { ar: "محطة الطقس البرية", en: "Ground Weather Station" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "https://www.youtube.com/watch?v=JahJLuobchw&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=6",
       },
       {
         id: "eng-211-l7",
-        title: { ar: "عملية البرمجيات", en: "عملية البرمجيات" },
+        title: { ar: "عملية البرمجيات", en: "Software Process" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "https://www.youtube.com/watch?v=tOHhLoXGZCc&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=7",
       },
       {
         id: "eng-211-l8",
-        title: { ar: "التطوير التدريجي", en: "التطوير التدريجي" },
+        title: { ar: "التطوير التدريجي", en: "Incremental Development" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "https://www.youtube.com/watch?v=gAlGdUWck9E&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=8",
       },
       {
         id: "eng-211-l9",
-        title: { ar: "أنشطة عملية", en: "أنشطة عملية" },
+        title: { ar: "أنشطة عملية", en: "Practical Activities" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "https://www.youtube.com/watch?v=RmYMVRCqxBA&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=9",
       },
       {
         id: "eng-211-l10",
-        title: { ar: "المرحلة والاختبار", en: "المرحلة والاختبار" },
+        title: { ar: "المرحلة والاختبار", en: "Phases and Testing" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "https://www.youtube.com/watch?v=_GP4j-mKPYg&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=10",
       },
       {
         id: "eng-211-l11",
-        title: { ar: "نماذج البرامج", en: "نماذج البرامج" },
+        title: { ar: "نماذج البرامج", en: "Software Models" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "https://www.youtube.com/watch?v=n9pO4i_9Lko&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=11",
       },
       {
         id: "eng-211-l12",
-        title: { ar: "تحسين العمليات", en: "تحسين العمليات" },
+        title: { ar: "تحسين العمليات", en: "Process Improvement" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "https://www.youtube.com/watch?v=lgLVzI_MWQk&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=12",
       },
       {
         id: "eng-211-l13",
-        title: { ar: "تطوير البرمجيات بستخدام Agile", en: "تطوير البرمجيات بستخدام Agile" },
+        title: { ar: "تطوير البرمجيات بستخدام Agile", en: "Agile Software Development" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "https://www.youtube.com/watch?v=-7LinGqHWQA&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=13",
       },
       {
         id: "eng-211-l14",
-        title: { ar: "طرق agile", en: "طرق agile" },
+        title: { ar: "طرق agile", en: "Agile Methods" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "https://www.youtube.com/watch?v=zC3JtMqelSM&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=14",
       },
       {
         id: "eng-211-l15",
-        title: { ar: "تقنيات التطوير باستخدام ِagile", en: "تقنيات التطوير باستخدام ِagile" },
+        title: { ar: "تقنيات التطوير باستخدام ِagile", en: "Agile Development Techniques" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "https://www.youtube.com/watch?v=z_BemS0y1ho&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=15",
       },
       {
         id: "eng-211-l16",
-        title: { ar: "قصص المستخدم ومتطلباته", en: "قصص المستخدم ومتطلباته" },
+        title: { ar: "قصص المستخدم ومتطلباته", en: "User Stories and Requirements" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "https://www.youtube.com/watch?v=ia7wKpyuSsw&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=16",
       },
       {
         id: "eng-211-l17",
-        title: { ar: "تطوير الاختبار الاول", en: "تطوير الاختبار الاول" },
+        title: { ar: "تطوير الاختبار الاول", en: "Test-First Development" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "youtube.com/watch?v=d7tdiTudu_Y&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=17&pp=iAQB",
       },
       {
         id: "eng-211-l18",
-        title: { ar: "تمتة الاختبار", en: "تمتة الاختبار" },
+        title: { ar: "تمتة الاختبار", en: "Test Automation" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "https://www.youtube.com/watch?v=Vqw4ICMp-jI&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=18",
       },
       {
         id: "eng-211-l19",
-        title: { ar: "ادارة مشروع agile + scrum", en: "ادارة مشروع agile + scrum" },
+        title: { ar: "ادارة مشروع agile + scrum", en: "Agile + Scrum Project Management" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "https://www.youtube.com/watch?v=FlyzF9UNOmg&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=19",
       },
       {
         id: "eng-211-l20",
-        title: { ar: "دورة scrum sprint", en: "دورة scrum sprint" },
+        title: { ar: "دورة scrum sprint", en: "Scrum Sprint Cycle" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "https://www.youtube.com/watch?v=oSpCxdxMcS8&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=20",
       },
       {
         id: "eng-211-l21",
-        title: { ar: "نمذجة النظام", en: "نمذجة النظام" },
+        title: { ar: "نمذجة النظام", en: "System Modeling" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "https://www.youtube.com/watch?v=ssINghF895E&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=21",
       },
       {
         id: "eng-211-l22",
-        title: { ar: "تموذج السياق", en: "تموذج السياق" },
+        title: { ar: "تموذج السياق", en: "Context Modeling" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "https://www.youtube.com/watch?v=41wXSMUJP0M&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=22",
       },
       {
         id: "eng-211-l23",
-        title: { ar: "نماذج التفاعل", en: "نماذج التفاعل" },
+        title: { ar: "نماذج التفاعل", en: "Interaction Models" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "https://www.youtube.com/watch?v=6W8L2p139iI&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=23",
       },
       {
         id: "eng-211-l24",
-        title: { ar: "النماذج الهيكلية", en: "النماذج الهيكلية" },
+        title: { ar: "النماذج الهيكلية", en: "Structural Models" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "https://www.youtube.com/watch?v=l3Xb2WlWxVM&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=24",
       },
       {
         id: "eng-211-l25",
-        title: { ar: "نماذج السلوك", en: "نماذج السلوك" },
+        title: { ar: "نماذج السلوك", en: "Behavioral Models" },
         description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
         videoURL:
           "https://www.youtube.com/watch?v=9iESLItGVa4&list=PLfJcnsgJ9GzKS_1wKLgMaRnxOiqLDeLRA&index=25",
@@ -258,132 +258,132 @@ export const coursesData = [
             ar:"قسم الحوسبة",
             en:"Computer Science"
         },
-    title: { ar: "تراكيب بيانات", en: "تراكيب بيانات" },
+    title: { ar: "تراكيب بيانات", en: "Data Structures" },
     faculty: "cs",
     level: {
             ar:"المستوى الثاني",
-            en:"المستوى الثاني"
+            en:"Second Level"
         },
     semester: {
             ar:"الفصل الأول",
-            en:"الفصل الأول"
+            en:"First Semester"
         },
     description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
     lectures: [
       {
         id: "eng-212-l1",
-        title: { ar: "مقدمة الكورس", en: "مقدمة الكورس" },
-        description: { ar: "مقدمة بسيطة عن المادة والمواضيع التي سيتم شرحها.", en: "مقدمة بسيطة عن المادة والمواضيع التي سيتم شرحها." },
+        title: { ar: "مقدمة الكورس", en: "Course Introduction" },
+        description: { ar: "مقدمة بسيطة عن المادة والمواضيع التي سيتم شرحها.", en: "A simple introduction to the course and the topics that will be covered." },
         videoURL: "https://youtu.be/DocSkU1Qyos?si=FsFLc4CfSH1O8Z8B",
       },
       {
         id: "eng-212-l2",
-        title: { ar: "مراجة لغة جافا", en: "مراجة لغة جافا" },
+        title: { ar: "مراجة لغة جافا", en: "Java Review" },
         description:
-          { ar: "مراجعة سريعة من لغة Java وأنواع البيانات والدوال والكائنات.", en: "مراجعة سريعة من لغة Java وأنواع البيانات والدوال والكائنات." },
+          { ar: "مراجعة سريعة من لغة Java وأنواع البيانات والدوال والكائنات.", en: "A quick review of Java, data types, functions, and objects." },
         videoURL: "https://youtu.be/SCEAJouTHPI?si=re0PGuFHmpZt2eqM",
       },
       {
         id: "eng-212-l3",
-        title: { ar: "تمثيل البيانات في الذاكرة", en: "تمثيل البيانات في الذاكرة" },
+        title: { ar: "تمثيل البيانات في الذاكرة", en: "Data Representation in Memory" },
         description:
-          { ar: "طرق تمثيل البيانات المترابطة في الذاكرة، وتوضيح مفهوم التمثيل الديناميكي عن طريق القائمة المرتبطة المفردة (SLL).", en: "طرق تمثيل البيانات المترابطة في الذاكرة، وتوضيح مفهوم التمثيل الديناميكي عن طريق القائمة المرتبطة المفردة (SLL)." },
+          { ar: "طرق تمثيل البيانات المترابطة في الذاكرة، وتوضيح مفهوم التمثيل الديناميكي عن طريق القائمة المرتبطة المفردة (SLL).", en: "Methods for representing linked data in memory, and explaining dynamic representation using a Singly Linked List (SLL)." },
         videoURL: "https://youtu.be/mzh5XO3jyDo?si=O3QMU9IKj9ULjSm7",
       },
       {
         id: "eng-212-l4",
-        title: { ar: "كيفية انشاء SLL", en: "كيفية انشاء SLL" },
+        title: { ar: "كيفية انشاء SLL", en: "How to Create an SLL" },
         description:
-          { ar: "شرح كيفية إنشاء SLL برمجياً وهندسياً وإنشاء Nodes وربطهم بها.", en: "شرح كيفية إنشاء SLL برمجياً وهندسياً وإنشاء Nodes وربطهم بها." },
+          { ar: "شرح كيفية إنشاء SLL برمجياً وهندسياً وإنشاء Nodes وربطهم بها.", en: "Explains how to build an SLL programmatically and conceptually, including creating and linking nodes." },
         videoURL: "https://www.youtube.com/watch?v=F0xCZ3K5zWU",
       },
       {
         id: "eng-212-l5",
-        title: { ar: "العمليات على SLL (1)", en: "العمليات على SLL (1)" },
+        title: { ar: "العمليات على SLL (1)", en: "Operations on SLL (1)" },
         description:
-          { ar: "تطبيق برمجي وهندسي لعمليات على SLL مثل طباعة محتويات القائمة أو البحث عن node معينة.", en: "تطبيق برمجي وهندسي لعمليات على SLL مثل طباعة محتويات القائمة أو البحث عن node معينة." },
+          { ar: "تطبيق برمجي وهندسي لعمليات على SLL مثل طباعة محتويات القائمة أو البحث عن node معينة.", en: "Programmatic and conceptual implementation of SLL operations such as printing list contents and searching for a specific node." },
         videoURL: "https://www.youtube.com/watch?v=roQsy2ro2qA",
       },
       {
         id: "eng-212-l6",
-        title: { ar: "العمليات على SLL (2)", en: "العمليات على SLL (2)" },
+        title: { ar: "العمليات على SLL (2)", en: "Operations on SLL (2)" },
         description:
-          { ar: "شرح عملية الإضافة برمجياً وهندسياً لأي node في بداية أو وسط أو نهاية القائمة.", en: "شرح عملية الإضافة برمجياً وهندسياً لأي node في بداية أو وسط أو نهاية القائمة." },
+          { ar: "شرح عملية الإضافة برمجياً وهندسياً لأي node في بداية أو وسط أو نهاية القائمة.", en: "Explains insertion operations programmatically and conceptually for any node at the beginning, middle, or end of the list." },
         videoURL: "https://youtu.be/NO3a_83MCRU?si=j93MbH1naQ6Y4jTw",
       },
       {
         id: "eng-212-l7",
-        title: { ar: "العمليات على SLL (3)", en: "العمليات على SLL (3)" },
+        title: { ar: "العمليات على SLL (3)", en: "Operations on SLL (3)" },
         description:
-          { ar: "شرح تطبيقات أخرى على القائمة مثل حذف node أو قلب القائمة أو دمج قائمتين.", en: "شرح تطبيقات أخرى على القائمة مثل حذف node أو قلب القائمة أو دمج قائمتين." },
+          { ar: "شرح تطبيقات أخرى على القائمة مثل حذف node أو قلب القائمة أو دمج قائمتين.", en: "Explains additional list operations such as deleting a node, reversing a list, or merging two lists." },
         videoURL: "https://youtu.be/E4_pNeJuaXA?si=TOiHNvoyROq0AHsx",
       },
       {
         id: "eng-212-l8",
-        title: { ar: "انشاء CLL & DLL", en: "انشاء CLL & DLL" },
+        title: { ar: "انشاء CLL & DLL", en: "Creating CLL & DLL" },
         description:
-          { ar: "شرح هياكل بيانات مرتبطة أخرى مثل القائمة المرتبطة المزودجة (DLL) و القائمة المرتبطة الدائرية (CLL).", en: "شرح هياكل بيانات مرتبطة أخرى مثل القائمة المرتبطة المزودجة (DLL) و القائمة المرتبطة الدائرية (CLL)." },
+          { ar: "شرح هياكل بيانات مرتبطة أخرى مثل القائمة المرتبطة المزودجة (DLL) و القائمة المرتبطة الدائرية (CLL).", en: "Explains other linked data structures such as Doubly Linked Lists (DLL) and Circular Linked Lists (CLL)." },
         videoURL: "https://youtu.be/Ok9JsGHm4HA?si=INZqAinytBU9EzMx",
       },
       {
         id: "eng-212-l9",
-        title: { ar: "الاستدعاء الذاتي (Recursion) (1)", en: "الاستدعاء الذاتي (Recursion) (1)" },
-        description: { ar: "شرح مفهوم الاستدعاء الذاتي للدوال (Recursion).", en: "شرح مفهوم الاستدعاء الذاتي للدوال (Recursion)." },
+        title: { ar: "الاستدعاء الذاتي (Recursion) (1)", en: "Recursion (1)" },
+        description: { ar: "شرح مفهوم الاستدعاء الذاتي للدوال (Recursion).", en: "Explains the concept of function recursion." },
         videoURL: "https://youtu.be/ulkviIBSGgM?si=HrddCW_HcF8uG852",
       },
       {
         id: "eng-212-l10",
-        title: { ar: "الاستدعاء الذاتي (Recursion) (2)", en: "الاستدعاء الذاتي (Recursion) (2)" },
-        description: { ar: "شرح هندسي لبعض الدوال التي تطبق مفهوم الاستدعاء الذاتي.", en: "شرح هندسي لبعض الدوال التي تطبق مفهوم الاستدعاء الذاتي." },
+        title: { ar: "الاستدعاء الذاتي (Recursion) (2)", en: "Recursion (2)" },
+        description: { ar: "شرح هندسي لبعض الدوال التي تطبق مفهوم الاستدعاء الذاتي.", en: "Conceptual explanation of functions that apply recursion." },
         videoURL: "https://youtu.be/N7TrfqIKRwQ?si=5nVsFmkL88rmgugE",
       },
       {
         id: "eng-212-l11",
-        title: { ar: "كيفية انشاء Stack", en: "كيفية انشاء Stack" },
+        title: { ar: "كيفية انشاء Stack", en: "How to Create a Stack" },
         description:
-          { ar: "شرح مفهوم ال Stack ومبدأ LIFO الذي يقوم عليه وكيفية الإضافة والحذف منه.", en: "شرح مفهوم ال Stack ومبدأ LIFO الذي يقوم عليه وكيفية الإضافة والحذف منه." },
+          { ar: "شرح مفهوم ال Stack ومبدأ LIFO الذي يقوم عليه وكيفية الإضافة والحذف منه.", en: "Explains the Stack concept, the LIFO principle, and how to push and pop elements." },
         videoURL: "https://youtu.be/fG455l8iuHA?si=Tn_lFk6avguwWCHO",
       },
       {
         id: "eng-212-l12",
-        title: { ar: "خوارزمية التحويل من infext الى podtfix", en: "خوارزمية التحويل من infext الى podtfix" },
+        title: { ar: "خوارزمية التحويل من infext الى podtfix", en: "Infix to Postfix Conversion Algorithm" },
         description:
-          { ar: "شرح الخوارزمية المتبعة في تحويل التعبيرات الرياضية من صورة infix إلى صورة postfix.", en: "شرح الخوارزمية المتبعة في تحويل التعبيرات الرياضية من صورة infix إلى صورة postfix." },
+          { ar: "شرح الخوارزمية المتبعة في تحويل التعبيرات الرياضية من صورة infix إلى صورة postfix.", en: "Explains the algorithm used to convert mathematical expressions from infix form to postfix form." },
         videoURL: "https://youtu.be/o7t4Iuh1qJA?si=TxZFLr0z0SiAiAW_",
       },
       {
         id: "eng-212-l13",
-        title: { ar: "تطبيق على ال stack (1)", en: "تطبيق على ال stack (1)" },
+        title: { ar: "تطبيق على ال stack (1)", en: "Stack Application (1)" },
         description:
-          { ar: "تطبيق عملي على Stack في تحويل التعبيرات الرياضية من infix إلى postfix.", en: "تطبيق عملي على Stack في تحويل التعبيرات الرياضية من infix إلى postfix." },
+          { ar: "تطبيق عملي على Stack في تحويل التعبيرات الرياضية من infix إلى postfix.", en: "Practical application of Stack in converting mathematical expressions from infix to postfix." },
         videoURL: "https://youtu.be/7pz1nzzXfBQ?si=aa06Aa1Tq2Y687dE",
       },
       {
         id: "eng-212-l14",
-        title: { ar: "تطبيق على ال stack (2)", en: "تطبيق على ال stack (2)" },
+        title: { ar: "تطبيق على ال stack (2)", en: "Stack Application (2)" },
         description:
-          { ar: "شرح تطبيقات مفهوم ال Stack في حساب قيمة التعبيرات الرياضية التي على شكل postfix، وفحص توازن الأقواس.", en: "شرح تطبيقات مفهوم ال Stack في حساب قيمة التعبيرات الرياضية التي على شكل postfix، وفحص توازن الأقواس." },
+          { ar: "شرح تطبيقات مفهوم ال Stack في حساب قيمة التعبيرات الرياضية التي على شكل postfix، وفحص توازن الأقواس.", en: "Explains Stack applications for evaluating postfix expressions and checking balanced parentheses." },
         videoURL: "https://youtu.be/1iXSN6YRa4g",
       },
       {
         id: "eng-212-l15",
-        title: { ar: "تطبيق على ال stack (3)", en: "تطبيق على ال stack (3)" },
+        title: { ar: "تطبيق على ال stack (3)", en: "Stack Application (3)" },
         description:
-          { ar: "استعمال ال Stack في تطبيق الدوال التي تنفذ استدعاء ذاتي (Recursion).", en: "استعمال ال Stack في تطبيق الدوال التي تنفذ استدعاء ذاتي (Recursion)." },
+          { ar: "استعمال ال Stack في تطبيق الدوال التي تنفذ استدعاء ذاتي (Recursion).", en: "Using Stack in implementing functions that perform recursion." },
         videoURL: "https://youtu.be/fVS-pHdCJ1s",
       },
       {
         id: "eng-212-l16",
-        title: { ar: "كيفية أنشاء ال Queue", en: "كيفية أنشاء ال Queue" },
+        title: { ar: "كيفية أنشاء ال Queue", en: "How to Create a Queue" },
         description:
-          { ar: "شرح مفهوم الطابور (Queue) ومبدأ FIFO الذي يتبعه في تمثيل البيانات.", en: "شرح مفهوم الطابور (Queue) ومبدأ FIFO الذي يتبعه في تمثيل البيانات." },
+          { ar: "شرح مفهوم الطابور (Queue) ومبدأ FIFO الذي يتبعه في تمثيل البيانات.", en: "Explains the Queue concept and the FIFO principle used in data representation." },
         videoURL: "https://youtu.be/4C3U2V0ghcU?si=oznEAT7txtgS8elI",
       },
       {
         id: "eng-212-l17",
-        title: { ar: "الشجرة الثنائية (Binary tree)", en: "الشجرة الثنائية (Binary tree)" },
+        title: { ar: "الشجرة الثنائية (Binary tree)", en: "Binary Tree" },
         description:
-          { ar: "شرح مفهوم الشجرة الثنائية (Binary tree) وكيفية ارتباط ال nodes معاً والمفاهيم المتعلقة بها.", en: "شرح مفهوم الشجرة الثنائية (Binary tree) وكيفية ارتباط ال nodes معاً والمفاهيم المتعلقة بها." },
+          { ar: "شرح مفهوم الشجرة الثنائية (Binary tree) وكيفية ارتباط ال nodes معاً والمفاهيم المتعلقة بها.", en: "Explains the Binary Tree concept, how nodes are connected, and related concepts." },
         videoURL: "https://youtu.be/kpNPObajBok?si=6AAHnkpivyWeHE6V",
       },
     ],
@@ -394,126 +394,126 @@ export const coursesData = [
             ar:"قسم الهندسة",
             en:"Engineering"
         },
-    title: { ar: "نظرية الأتمتة", en: "نظرية الأتمتة" },
+    title: { ar: "نظرية الأتمتة", en: "Automata Theory" },
     faculty: "eng",
-    level: { ar: "المستوى الثالث", en: "المستوى الثالث" },
+    level: { ar: "المستوى الثالث", en: "Third Level" },
     semester: {
             ar:"الفصل الأول",
-            en:"الفصل الأول"
+            en:"First Semester"
         },
     description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
     lectures: [
       {
         id: "eng-213-l1",
-        title: { ar: "مقدمة الكورس", en: "مقدمة الكورس" },
+        title: { ar: "مقدمة الكورس", en: "Course Introduction" },
         description:
-          { ar: "شرح مفهوم كلمة الأتمتة و أهميتها و مجالاتها ، و تعريف بعض المصطلحات الشائعة في المادة .", en: "شرح مفهوم كلمة الأتمتة و أهميتها و مجالاتها ، و تعريف بعض المصطلحات الشائعة في المادة ." },
+          { ar: "شرح مفهوم كلمة الأتمتة و أهميتها و مجالاتها ، و تعريف بعض المصطلحات الشائعة في المادة .", en: "Explains the concept of automata, its importance and fields, and defines common course terms." },
         videoURL: "https://youtu.be/eD92CfCDgIg?si=LSfa_4ETdiBu_FfF",
       },
       {
         id: "eng-213-l2",
-        title: { ar: "حل لغز", en: "حل لغز" },
-        description: { ar: "حل لغز و توضيح علاقته بال Finite Automata .", en: "حل لغز و توضيح علاقته بال Finite Automata ." },
+        title: { ar: "حل لغز", en: "Solving a Puzzle" },
+        description: { ar: "حل لغز و توضيح علاقته بال Finite Automata .", en: "Solve a puzzle and explain its relation to Finite Automata." },
         videoURL: "https://youtu.be/BjgK9yYDOhQ?si=B-Z7SxuJRnOdPWUT",
       },
       {
         id: "eng-213-l3",
-        title: { ar: "توضيح ال مفهوم Finite Automata", en: "توضيح ال مفهوم Finite Automata" },
+        title: { ar: "توضيح ال مفهوم Finite Automata", en: "Explaining the Finite Automata Concept" },
         description:
-          { ar: "توضيح معنى Finite Automata و مكوناتها و توضيح مصطلح ال formal language .", en: "توضيح معنى Finite Automata و مكوناتها و توضيح مصطلح ال formal language ." },
+          { ar: "توضيح معنى Finite Automata و مكوناتها و توضيح مصطلح ال formal language .", en: "Explains the meaning of Finite Automata, its components, and the term formal language." },
         videoURL: "https://youtu.be/EQWuRlhSTuo?si=jdNPxFUYG4nXkz3x",
       },
       {
         id: "eng-213-l4",
-        title: { ar: "أنواع الFA", en: "أنواع الFA" },
+        title: { ar: "أنواع الFA", en: "Types of FA" },
         description:
-          { ar: "تثبيت مصطلح FA ،،انواع ال FA -> DFA , NFA و الفرق بينهم ، و تحديد اللغة التي تمثلها ال F.", en: "تثبيت مصطلح FA ،،انواع ال FA -> DFA , NFA و الفرق بينهم ، و تحديد اللغة التي تمثلها ال F." },
+          { ar: "تثبيت مصطلح FA ،،انواع ال FA -> DFA , NFA و الفرق بينهم ، و تحديد اللغة التي تمثلها ال F.", en: "Reinforces the FA term, covers DFA and NFA types, explains the differences, and identifies the language represented by the automaton." },
         videoURL: "https://youtu.be/grMNGq7lLms?si=kcIAgihNTr58Ipee",
       },
       {
         id: "eng-213-l5",
-        title: { ar: "الفرق بين NFA & DFA", en: "الفرق بين NFA & DFA" },
+        title: { ar: "الفرق بين NFA & DFA", en: "Difference Between NFA & DFA" },
         description:
-          { ar: "تكملة شرح امثلة و تحديد متى تكون الرسمة DFA و NFA و ما الفرق بينهم", en: "تكملة شرح امثلة و تحديد متى تكون الرسمة DFA و NFA و ما الفرق بينهم" },
+          { ar: "تكملة شرح امثلة و تحديد متى تكون الرسمة DFA و NFA و ما الفرق بينهم", en: "Continues with examples and clarifies when a diagram is DFA or NFA and the differences between them." },
         videoURL: "https://youtu.be/dTqTf4KTT5M?si=fKUME48Lp5Kh1GkL",
       },
       {
         id: "eng-213-l6",
-        title: { ar: "حل أسئلة DFA", en: "حل أسئلة DFA" },
-        description: { ar: "حل اسئلة على ال DFA ", en: "حل اسئلة على ال DFA " },
+        title: { ar: "حل أسئلة DFA", en: "Solving DFA Questions" },
+        description: { ar: "حل اسئلة على ال DFA ", en: "Solving questions on DFA." },
         videoURL: "https://youtu.be/C4KZvbT8fnE?si=oubNln1BKIpu5q5M",
       },
       {
         id: "eng-213-l7",
-        title: { ar: "مناقشة أسئلة DFA (1)", en: "مناقشة أسئلة DFA (1)" },
-        description: { ar: "مناقشة سؤال المحاضرة السابقة .", en: "مناقشة سؤال المحاضرة السابقة ." },
+        title: { ar: "مناقشة أسئلة DFA (1)", en: "DFA Question Discussion (1)" },
+        description: { ar: "مناقشة سؤال المحاضرة السابقة .", en: "Discusses a question from the previous lecture." },
         videoURL: "https://youtu.be/WxAGa-0mZ9Y?si=jk14IEeA6mkkHNiU",
       },
       {
         id: "eng-213-l8",
-        title: { ar: "مناقشة أسئلة DFA (2)", en: "مناقشة أسئلة DFA (2)" },
-        description: { ar: "استكمال مناقشة السؤال و أمثلة ..", en: "استكمال مناقشة السؤال و أمثلة .." },
+        title: { ar: "مناقشة أسئلة DFA (2)", en: "DFA Question Discussion (2)" },
+        description: { ar: "استكمال مناقشة السؤال و أمثلة ..", en: "Continues the question discussion with examples." },
         videoURL: "https://youtu.be/ld_wv2VTeNU?si=gEXgakUS2R3Js7Gw",
       },
       {
         id: "eng-213-l9",
-        title: { ar: "مناقشة أسئلة DFA (3)", en: "مناقشة أسئلة DFA (3)" },
-        description: { ar: "حل اسئلة مهمة ...", en: "حل اسئلة مهمة ..." },
+        title: { ar: "مناقشة أسئلة DFA (3)", en: "DFA Question Discussion (3)" },
+        description: { ar: "حل اسئلة مهمة ...", en: "Solves important questions." },
         videoURL: "https://youtu.be/Mu4CPCzCgT8?si=sRNUlNv05h5YNj48",
       },
       {
         id: "eng-213-l10",
-        title: { ar: "مناقشة أسئلة DFA (4)", en: "مناقشة أسئلة DFA (4)" },
-        description: { ar: "استكمال حل اسئلة و توضيح مصطلح ال dead stute .", en: "استكمال حل اسئلة و توضيح مصطلح ال dead stute ." },
+        title: { ar: "مناقشة أسئلة DFA (4)", en: "DFA Question Discussion (4)" },
+        description: { ar: "استكمال حل اسئلة و توضيح مصطلح ال dead stute .", en: "Continues solving questions and explains the dead state term." },
         videoURL: "https://youtu.be/t145ZlsZYVE?si=iJgMBQeJ7R0xwdBj",
       },
       {
         id: "eng-213-l11",
-        title: { ar: "مناقشة أسئلة DFA (5)", en: "مناقشة أسئلة DFA (5)" },
-        description: { ar: "حل اسئلة على DFA و اسئلة في النهاية للطالب ", en: "حل اسئلة على DFA و اسئلة في النهاية للطالب " },
+        title: { ar: "مناقشة أسئلة DFA (5)", en: "DFA Question Discussion (5)" },
+        description: { ar: "حل اسئلة على DFA و اسئلة في النهاية للطالب ", en: "Solves DFA questions and includes end-of-lecture questions for students." },
         videoURL: "https://youtu.be/cXPqxSGjBFg?si=DdtpjnOsF97OIar5",
       },
       {
         id: "eng-213-l12",
-        title: { ar: "مناقشة أسئلة DFA (6)", en: "مناقشة أسئلة DFA (6)" },
-        description: { ar: "استكمال اسئلة ..", en: "استكمال اسئلة .." },
+        title: { ar: "مناقشة أسئلة DFA (6)", en: "DFA Question Discussion (6)" },
+        description: { ar: "استكمال اسئلة ..", en: "Continues solving questions." },
         videoURL: "https://youtu.be/QStxIFJbepM?si=rbWgaXrsTMq3wYrz",
       },
       {
         id: "eng-213-l13",
-        title: { ar: "شرح NFA", en: "شرح NFA" },
-        description: { ar: "شرح NFA و توضيحها بالأمثلة ", en: "شرح NFA و توضيحها بالأمثلة " },
+        title: { ar: "شرح NFA", en: "Explaining NFA" },
+        description: { ar: "شرح NFA و توضيحها بالأمثلة ", en: "Explains NFA with examples." },
         videoURL: "https://youtu.be/CxK_T9_WCeo?si=dCHveaPbPJQIsf73",
       },
       {
         id: "eng-213-l14",
-        title: { ar: "حل أسئلة NFA", en: "حل أسئلة NFA" },
-        description: { ar: "استكمال حل اسئلة على NFA.", en: "استكمال حل اسئلة على NFA." },
+        title: { ar: "حل أسئلة NFA", en: "Solving NFA Questions" },
+        description: { ar: "استكمال حل اسئلة على NFA.", en: "Continues solving NFA questions." },
         videoURL: "https://youtu.be/IKJfdugRyHg?si=x06HAT0WMzJs8twf",
       },
       {
         id: "eng-213-l15",
-        title: { ar: "التحويل من NFA الى DFA", en: "التحويل من NFA الى DFA" },
-        description: { ar: "خوارزمية طريقة تحويل NFA الى DFA ، و ليش بنحتاج نحول ", en: "خوارزمية طريقة تحويل NFA الى DFA ، و ليش بنحتاج نحول " },
+        title: { ar: "التحويل من NFA الى DFA", en: "Converting NFA to DFA" },
+        description: { ar: "خوارزمية طريقة تحويل NFA الى DFA ، و ليش بنحتاج نحول ", en: "Covers the algorithm for converting NFA to DFA and why this conversion is needed." },
         videoURL: "https://youtu.be/dfa5JpuW8ek?si=YomhCNvweYJHqdBQ",
       },
       {
         id: "eng-213-l16",
-        title: { ar: "حل أسئلة على التحويل من NFA الى DFA", en: "حل أسئلة على التحويل من NFA الى DFA" },
-        description: { ar: "حل اسئلة على خوارزمية التحويل من NFAالى DFA ", en: "حل اسئلة على خوارزمية التحويل من NFAالى DFA " },
+        title: { ar: "حل أسئلة على التحويل من NFA الى DFA", en: "Solving Questions on NFA-to-DFA Conversion" },
+        description: { ar: "حل اسئلة على خوارزمية التحويل من NFAالى DFA ", en: "Solves questions on the NFA-to-DFA conversion algorithm." },
         videoURL: "https://youtu.be/j185djkMb7E?si=Sny9EUWE5l4ftZ-E",
       },
       {
         id: "eng-213-l17",
-        title: { ar: "شرح NFA with Lamda transitions", en: "شرح NFA with Lamda transitions" },
-        description: { ar: "شرح NFA with Lamda transitions ، و حل أمثلة عليها .", en: "شرح NFA with Lamda transitions ، و حل أمثلة عليها ." },
+        title: { ar: "شرح NFA with Lamda transitions", en: "Explaining NFA with Lambda Transitions" },
+        description: { ar: "شرح NFA with Lamda transitions ، و حل أمثلة عليها .", en: "Explains NFA with lambda transitions and solves related examples." },
         videoURL: "https://youtu.be/5QwspuIyaMg?si=YkC8B9KCgjLUD5e5",
       },
       {
         id: "eng-213-l18",
-        title: { ar: "التحويل من NFA with lamda transition الى DFA", en: "التحويل من NFA with lamda transition الى DFA" },
+        title: { ar: "التحويل من NFA with lamda transition الى DFA", en: "Converting NFA with Lambda Transitions to DFA" },
         description:
-          { ar: "اسئلة على التحويل من NFA with Lamda transition الى DFA ، و اسئلة في نهاية المحاضرة للطالب .", en: "اسئلة على التحويل من NFA with Lamda transition الى DFA ، و اسئلة في نهاية المحاضرة للطالب ." },
+          { ar: "اسئلة على التحويل من NFA with Lamda transition الى DFA ، و اسئلة في نهاية المحاضرة للطالب .", en: "Questions on converting NFA with lambda transitions to DFA, with end-of-lecture questions for students." },
         videoURL: "https://youtu.be/8OuiIDhI4Kw?si=jmeTeeV1DFOOzPm_",
       },
     ],
