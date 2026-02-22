@@ -1,5 +1,5 @@
 ﻿const sec1 = document.querySelector(".js.sec2");
-const lects = document.querySelector(".js.sec4");
+const lects = document.querySelector(".jssec4");
 
 import { coursesData } from "./main.js";
 import { siteLang } from "./main.js";
@@ -149,41 +149,69 @@ export function reset() {
     }
   }
 
-  doneItems.forEach((el) => {
-    if (lecturesDone.includes(el.dataset.id)) {
+  function setLectureState(el, isDone) {
+    const check = el.querySelector(".check");
+
+    if (isDone) {
       el.classList.add("is-active");
-      const check = el.querySelector(".check");
-      if (check) {
-        check.children[0].classList.toggle("d-none");
-        check.children[1].classList.toggle("d-none");
-      }
+    } else {
+      el.classList.remove("is-active");
     }
 
+    if (check) {
+      check.children[0].classList.toggle("d-none", isDone);
+      check.children[1].classList.toggle("d-none", !isDone);
+    }
+  }
+
+  doneItems.forEach((el) => {
+    const lectureId = el.dataset.id;
+    const check = el.querySelector(".check");
+    setLectureState(el, Boolean(lectureId && lecturesDone.includes(lectureId)));
+
     el.onclick = () => {
-      const lectureId = el.dataset.id;
       if (!lectureId) {
         return;
       }
 
-      el.classList.toggle("is-active");
-
-      if (el.classList.contains("is-active")) {
-        if (!lecturesDone.includes(lectureId)) {
-          lecturesDone.push(lectureId);
-        }
-      } else {
-        lecturesDone = lecturesDone.filter((id) => id !== lectureId);
+      if (lecturesDone.includes(lectureId)) {
+        return;
       }
 
+      lecturesDone.push(lectureId);
+      setLectureState(el, true);
       saveCourseProgress(courseSelected.id, lecturesDone);
       updateProgressUi();
-
-      const check = el.querySelector(".check");
-      if (check) {
-        check.children[0].classList.toggle("d-none");
-        check.children[1].classList.toggle("d-none");
-      }
     };
+
+    if (check) {
+      check.onclick = (event) => {
+        event.stopPropagation();
+
+        if (!lecturesDone.includes(lectureId)) {
+          return;
+        }
+
+        lecturesDone = lecturesDone.filter((id) => id !== lectureId);
+        setLectureState(el, false);
+        saveCourseProgress(courseSelected.id, lecturesDone);
+        updateProgressUi();
+      };
+      check.onkeydown = (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          check.click();
+        }
+      };
+
+      if (!check.hasAttribute("tabindex")) {
+        check.setAttribute("tabindex", "0");
+      }
+      if (!check.hasAttribute("role")) {
+        check.setAttribute("role", "button");
+      }
+      check.setAttribute("aria-label", "Mark lecture as not attended");
+    }
   });
 
   updateProgressUi();

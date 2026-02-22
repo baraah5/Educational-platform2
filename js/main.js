@@ -61,7 +61,7 @@ export const coursesData = [
   {
     id: "eng-211",
     idName:{
-            ar:"قسم الحوسبة",
+            ar:" قسم علوم الحاسوب ",
             en:"Computer Science"
         },
     title: { ar: "مقدمة في هندسة البرمجيات", en: "Introduction to Software Engineering" },
@@ -255,7 +255,7 @@ export const coursesData = [
   {
     id: "eng-212",
     idName:{
-            ar:"قسم الحوسبة",
+            ar:"قسم علوم الحاسوب ",
             en:"Computer Science"
         },
     title: { ar: "تراكيب بيانات", en: "Data Structures" },
