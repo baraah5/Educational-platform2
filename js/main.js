@@ -537,74 +537,74 @@ showCourse.forEach(showCourse=>{
 
 
 
-export const whyUsCards = [
-    {
-        icon: "fa-solid fa-book",
-        title:{
-            ar:"محتوى أكاديمي منظم",
-            en:""
-        },
-        desc:{
-            ar:"نوفر محتوى دراسيًا مرتبًا يساعدك على الوصول للمعلومة بسرعة ووضوح.",
-            en:""
-        }
-    },
-    {
-        icon: "fa-solid fa-rocket",
-        title:{
-            ar:"سرعة في الوصول",
-            en:""
-        },
-        desc:{
-            ar:"منصة سريعة وسهلة الاستخدام تمكّنك من الوصول إلى الكورسات والمحاضرات فورًا.",
-            en:""
-        }
-    },
-    {
-        icon: "fa-solid fa-users",
-        title:{
-            ar:"مصممة للطلاب",
-            en:""
-        },
-        desc:{
-            ar:"التجربة التعليمية مبنية لتناسب احتياجات طلاب الهندسة وتقنية المعلومات.",
-            en:""
-        }
-    },
-    {
-        icon: "fa-solid fa-medal",
-        title:{
-            ar:"جودة تعليمية",
-            en:""
-        },
-        desc:{
-            ar:"نركز على تقديم محتوى موثوق وواضح يرفع مستوى التحصيل الأكاديمي.",
-            en:""
-        }
-    },
-    {
-        icon: "fa-solid fa-bolt-lightning",
-        title:{
-            ar:"تحديث مستمر",
-            en:""
-        },
-        desc:{
-            ar:"نعمل على تحسين المحتوى والمنصة بشكل دوري لمواكبة التطورات التعليمية.",
-            en:""
-        }
-    },
-    {
-        icon: "fa-regular fa-lightbulb",
-        title:{
-            ar:"تعلم بذكاء",
-            en:""
-        },
-        desc:{
-            ar:"أدوات العرض والتصفية تساعدك على اختيار الكورس المناسب بسهولة.",
-            en:""
-        }
-    },
-]
+// export const whyUsCards = [
+//     {
+//         icon: "fa-solid fa-book",
+//         title:{
+//             ar:"محتوى أكاديمي منظم",
+//             en:""
+//         },
+//         desc:{
+//             ar:"نوفر محتوى دراسيًا مرتبًا يساعدك على الوصول للمعلومة بسرعة ووضوح.",
+//             en:""
+//         }
+//     },
+//     {
+//         icon: "fa-solid fa-rocket",
+//         title:{
+//             ar:"سرعة في الوصول",
+//             en:""
+//         },
+//         desc:{
+//             ar:"منصة سريعة وسهلة الاستخدام تمكّنك من الوصول إلى الكورسات والمحاضرات فورًا.",
+//             en:""
+//         }
+//     },
+//     {
+//         icon: "fa-solid fa-users",
+//         title:{
+//             ar:"مصممة للطلاب",
+//             en:""
+//         },
+//         desc:{
+//             ar:"التجربة التعليمية مبنية لتناسب احتياجات طلاب الهندسة وتقنية المعلومات.",
+//             en:""
+//         }
+//     },
+//     {
+//         icon: "fa-solid fa-medal",
+//         title:{
+//             ar:"جودة تعليمية",
+//             en:""
+//         },
+//         desc:{
+//             ar:"نركز على تقديم محتوى موثوق وواضح يرفع مستوى التحصيل الأكاديمي.",
+//             en:""
+//         }
+//     },
+//     {
+//         icon: "fa-solid fa-bolt-lightning",
+//         title:{
+//             ar:"تحديث مستمر",
+//             en:""
+//         },
+//         desc:{
+//             ar:"نعمل على تحسين المحتوى والمنصة بشكل دوري لمواكبة التطورات التعليمية.",
+//             en:""
+//         }
+//     },
+//     {
+//         icon: "fa-regular fa-lightbulb",
+//         title:{
+//             ar:"تعلم بذكاء",
+//             en:""
+//         },
+//         desc:{
+//             ar:"أدوات العرض والتصفية تساعدك على اختيار الكورس المناسب بسهولة.",
+//             en:""
+//         }
+//     },
+// ]
 
 
 
@@ -672,7 +672,7 @@ const resources = {
         showBtn: "Show Course"
       },
       CoursePresentationn: {
-        pageTitle: "Engineering Mathematics",
+        // pageTitle: "Engineering Mathematics",
         back: "<- Back to Courses",
         progressTitle: "Course Progress",
         lessonWord: "Lesson",
@@ -769,7 +769,7 @@ const resources = {
         showBtn: "عرض الكورس"
       },
       CoursePresentationn: {
-        pageTitle: "الرياضيات الهندسية",
+        // pageTitle: "الرياضيات الهندسية",
         back: "<- العودة إلى الكورسات",
         progressTitle: "تقدم الكورس",
         lessonWord: "محاضرة",

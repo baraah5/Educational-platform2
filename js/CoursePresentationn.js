@@ -7,6 +7,108 @@ import { siteLang } from "./main.js";
 const COURSE_PROGRESS_KEY = "lecturesDoneByCourse";
 const SELECTED_COURSE_KEY = "selectedCourseId";
 
+
+function loadYouTubeAPI() {
+  if (window.YT && window.YT.Player) {
+    console.log("YT already loaded");
+    return;
+  }
+
+  const existingScript = document.querySelector(
+    'script[src="https://www.youtube.com/iframe_api"]'
+  );
+
+  if (existingScript) return;
+
+  const tag = document.createElement("script");
+  tag.src = "https://www.youtube.com/iframe_api";
+  document.body.appendChild(tag);
+}
+
+
+
+// function getVideoId(url) {
+//   const regExp = /(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&]+)/;
+//   const match = url.match(regExp);
+//   return match ? match[1] : null;
+// }
+
+// function getVideoId(url) {
+//   const regExp = /(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([^&?/]+)/;
+//   const match = url.match(regExp);
+//   return match ? match[1] : null;
+// }
+
+// // let player;
+// // let isPlayerReady = false;
+
+// // window.onYouTubeIframeAPIReady = function () {
+// //   player = new YT.Player("player", {
+// //     videoId: "M7lc1UVf-VE",
+// //     events: {
+// //       onReady: function () {
+// //         isPlayerReady = true;
+// //         console.log("Player جاهز");
+// //       }
+// //     }
+// //   });
+// // };
+
+// let player;
+// let isPlayerReady = false;
+
+// window.onYouTubeIframeAPIReady = function () {
+//   player = new YT.Player("player", {
+//     videoId: "M7lc1UVf-VE",
+//     events: {
+//       onReady: function () {
+//         isPlayerReady = true;
+//         console.log("Player جاهز ✅");
+//       }
+//     }
+//   });
+// };
+
+let player;
+let isPlayerReady = false;
+
+function resizePlayer() {
+  const playerContainer = document.getElementById("player");
+  if (!playerContainer || !player || typeof player.setSize !== "function") {
+    return;
+  }
+
+  const width = playerContainer.clientWidth;
+  const height = Math.round((width * 9) / 16);
+  player.setSize(width, height);
+}
+
+// دالة استخراج videoId
+function getVideoId(url) {
+  const regExp = /(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([^&?/]+)/;
+  const match = url.match(regExp);
+  return match ? match[1] : null;
+}
+
+// 🌟 جعل الدالة global
+window.onYouTubeIframeAPIReady = function() {
+  player = new YT.Player("player", {
+    // videoId: "M7lc1UVf-VE", // الفيديو الافتراضي
+    events: {
+      onReady: function() {
+        isPlayerReady = true;
+        resizePlayer();
+        console.log("Player جاهز ✅");
+      }
+    }
+  });
+};
+
+
+loadYouTubeAPI();
+window.addEventListener("resize", resizePlayer);
+
+
 function getLocalizedValue(value, lang) {
   if (value && typeof value === "object") {
     const preferred = value[lang];
@@ -98,7 +200,7 @@ export function reset() {
   let num = 0;
   courseLectures.forEach((lect) => {
     num += 1;
-    const item = `<div class="m-3" data-id="${lect.id}">
+    const item = `<div class="m-3" data-id=${lect.id} data-href=${lect.videoURL}>
       <div class="lects">
         <div class="row align-items-center">
           <div class="col-lg-1 col-2 text-center">
@@ -178,6 +280,26 @@ export function reset() {
         return;
       }
 
+      const play = document.getElementById("player")
+      console.log(play.classList);
+      play.classList.remove("d-none")
+
+      // const videoId = el.dataset.href;
+      // console.log(videoId);
+      // player.loadVideoById(videoId);
+
+     const url = el.dataset.href;
+    const videoId = getVideoId(url);
+    console.log("Video ID:", videoId);
+
+    if (isPlayerReady && player) {
+      player.loadVideoById(videoId);
+      resizePlayer();
+      console.log("Video loaded ✅");
+    } else {
+      console.log("Player not ready yet ❌");
+    }
+
       lecturesDone.push(lectureId);
       setLectureState(el, true);
       saveCourseProgress(courseSelected.id, lecturesDone);
@@ -216,3 +338,5 @@ export function reset() {
 
   updateProgressUi();
 }
+
+

@@ -68,6 +68,24 @@ body {
     box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.1);
 }
 
+#player {
+    display: block;
+    width: min(calc(100% - 48px), 900px);
+    aspect-ratio: 16 / 9;
+    margin-block: 24px !important;
+    margin-inline: auto !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+#player iframe {
+    width: 100% !important;
+    height: 100% !important;
+    display: block;
+    border: 0;
+    border-radius: 12px;
+}
+
 .line {
     border: 1px solid #E5E7EB;
     border-radius: 20px;
@@ -177,9 +195,20 @@ body {
     .sec4 h5 {
         font-size: 16px;
     }
+
+    #player {
+        width: min(calc(100% - 24px), 900px);
+        margin-block: 16px !important;
+        margin-inline: auto !important;
+    }
 }
 
 @media (max-width: 500px) {
+    /* .hero {
+        width: 100%;
+        margin-inline: auto;
+    } */
+
     .sec2 > div {
         padding-inline: 10px;
     }
@@ -200,7 +229,8 @@ body {
     .sec2 ul li {
         margin: 0 !important;
         flex: 1 1 auto;
-        padding-inline: 0;
+        padding-inline-end: 2px;
+        /* padding: 5px 0; */
     }
 
     .sec2 ul .list-inline-item:not(:last-child) {
@@ -214,17 +244,19 @@ body {
     }
 
     .sec4 .lects .row > div:last-child {
-        display: none;
+        display: block;
+        flex: 0 0 16.666667%;
+        max-width: 16.666667%;
     }
 
     .sec4 .lects .row > div:nth-child(2) {
-        flex: 0 0 83.333333%;
-        max-width: 83.333333%;
+        flex: 0 0 66.666667%;
+        max-width: 66.666667%;
     }
 
     .sec2 ul li a{
-        font-size: 12px;
-        padding: 2px 10px;
+        font-size: 10px;
+        padding: 6px 3px;
         /* padding: 0; */
     }
 
@@ -246,6 +278,16 @@ body {
         width: 30px;
     }
 
+    .sec4 .lects .check p {
+        width: 22px;
+        height: 22px;
+        border-width: 1.5px;
+    }
+
+    .sec4 .lects .check i {
+        font-size: 18px !important;
+    }
+
     .sec4 .par{
         font-size: 13px;
     }
@@ -255,6 +297,6 @@ body {
     }
 
     .container {
-        width: 90% !important;
+        width: 98% !important;
     }
 }
