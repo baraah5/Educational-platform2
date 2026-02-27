@@ -3,13 +3,7 @@ body{
     background-color: #e8e8e89a;
 }
 
-.hero {
-    /* padding: 0 0 128px 0; */
-}
-
 .sec1 i {
-    /* font-size: 50px; */ 
-    /* color: #4F39F6; */
     padding: 0 5px 0 15px;
 }
 
@@ -22,12 +16,9 @@ form {
 }
 
 .contact-form {
-    /* width: 600px; */
-    /* padding: 10px; */
     display: flex;
     flex-direction: column;
     gap: 12px;
-    /* border: 0; */
 }
 .container{
     width: 90%;
@@ -36,17 +27,11 @@ form {
 .contact-form select{
     padding: 8px;
     border: 1px solid #ccc;
-    /* border-radius: 0px; */
     font-size: 16px;
     border-radius: 10px;
     background-color: #cccccc27;
     outline: none;
-    /* border: 0; */
 }
-
-/* select::placeholder {
-    color: #999;
-} */
 
 .course {
     min-height: 250px;
@@ -138,8 +123,5 @@ ul li::marker {
     .sec1 i{
         font-size: 25px;
         padding: 0 0 0 5px;
-    }
-    .container{
-        /* width: 90%; */
     }
 }

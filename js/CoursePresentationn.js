@@ -26,49 +26,6 @@ function loadYouTubeAPI() {
 }
 
 
-
-// function getVideoId(url) {
-//   const regExp = /(?:youtube\.com\/watch\?v=|youtu\.be\/)([^&]+)/;
-//   const match = url.match(regExp);
-//   return match ? match[1] : null;
-// }
-
-// function getVideoId(url) {
-//   const regExp = /(?:youtube\.com\/(?:watch\?v=|embed\/)|youtu\.be\/)([^&?/]+)/;
-//   const match = url.match(regExp);
-//   return match ? match[1] : null;
-// }
-
-// // let player;
-// // let isPlayerReady = false;
-
-// // window.onYouTubeIframeAPIReady = function () {
-// //   player = new YT.Player("player", {
-// //     videoId: "M7lc1UVf-VE",
-// //     events: {
-// //       onReady: function () {
-// //         isPlayerReady = true;
-// //         console.log("Player جاهز");
-// //       }
-// //     }
-// //   });
-// // };
-
-// let player;
-// let isPlayerReady = false;
-
-// window.onYouTubeIframeAPIReady = function () {
-//   player = new YT.Player("player", {
-//     videoId: "M7lc1UVf-VE",
-//     events: {
-//       onReady: function () {
-//         isPlayerReady = true;
-//         console.log("Player جاهز ✅");
-//       }
-//     }
-//   });
-// };
-
 let player;
 let isPlayerReady = false;
 
@@ -90,10 +47,9 @@ function getVideoId(url) {
   return match ? match[1] : null;
 }
 
-// 🌟 جعل الدالة global
+// جعل الدالة global
 window.onYouTubeIframeAPIReady = function() {
   player = new YT.Player("player", {
-    // videoId: "M7lc1UVf-VE", // الفيديو الافتراضي
     events: {
       onReady: function() {
         isPlayerReady = true;
@@ -276,17 +232,9 @@ export function reset() {
         return;
       }
 
-      // if (lecturesDone.includes(lectureId)) {
-      //   return;
-      // }
-
       const play = document.getElementById("player")
       console.log(play.classList);
       play.classList.remove("d-none")
-
-      // const videoId = el.dataset.href;
-      // console.log(videoId);
-      // player.loadVideoById(videoId);
 
      const url = el.dataset.href;
     const videoId = getVideoId(url);

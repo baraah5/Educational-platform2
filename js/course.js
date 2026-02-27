@@ -1,17 +1,9 @@
 ﻿const courses = document.querySelector(".sec2 .courses")
-// const courseBage = document.querySelector(".courseBage")
-// const levelsForm = document.querySelector(".levelsForm")
-// const coursesNumber = document.querySelector(".sec2 h5")
-const course = []
-let i = 0
-// console.log(coursesNumber.innerHTML);
 
 
 
 import { coursesData } from "./main.js"
 import { siteLang } from "./main.js"
-// import { courseBageInfo } from "./main.js"
-// import { levelsFormIfo } from "./main.js"
 const SELECTED_COURSE_KEY = "selectedCourseId";
 const LEVEL_PATTERNS = [
   { code: "level1", patterns: [/first level/i, /المستوى\s*الأول/, /المستوى\s*الاول/] },
@@ -74,11 +66,9 @@ function ensureAllOption(select, text) {
 
 
 export function reset(){
-  i = 0
 
   if(courses){
         courses.innerHTML = ""
-        // console.log(siteLang);
     }
 
     
@@ -89,7 +79,6 @@ export function reset(){
 
     coursesData.forEach(course => {
     
-      // console.log(siteLang);
           let item = ``
           const facultyClass = course.faculty === "cs" ? "cs" : "eng";
           const courseTitle = getLocalizedValue(course.title ?? course.name, siteLang);
@@ -134,9 +123,6 @@ export function reset(){
             </div>
           </div>`
           }
-          course[i] = item
-          // console.log(course[i]);
-          i++;
           courses?.insertAdjacentHTML('beforeend', item);
       
       
@@ -160,28 +146,6 @@ export function reset(){
     courses.dataset.selectionBound = "1";
   }
 }
-
-// const options = document.querySelectorAll("option")
-
-// function optionsF( ){
-// const courseCard = document.querySelectorAll(".course")
-//   console.log(courseCard);
-// }
-
-// console.log(options);
-
-// options.forEach(el =>{
-//   el.onclick = ()=>{
-//     // console.log(courseCard);
-//     optionsF()
-//   }
-// })
-
-// optionsF()
-
-// reset();
-
-// reset();
 
 const levelSelect = document.querySelector("#levels");
 const semesterSelect = document.querySelector("#seasons");

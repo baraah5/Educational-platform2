@@ -4,10 +4,7 @@
 
 const active = document.querySelector('.back-top')
 const lang = document.querySelector(".lang")
-const footer = document.querySelector("footer")
-const header = document.querySelector("header")
 
-// console.log(lang);
 export let siteLang = localStorage.getItem("lang") || document.documentElement.lang || "en";
 
 
@@ -30,11 +27,8 @@ active.onclick = () => {
 
 const open = document.querySelector('.menu button')
 const close = document.querySelector('.sidemenu .close')
-// let lang = document.querySelector(".lang")
 const side = document.querySelector('.sidemenu')
-// console.log(lang);
 checkActiveLink();
-// console.log(open);
 
 open.onclick = () => side.classList.add('open')
 
@@ -526,7 +520,6 @@ export let anyCoyrse = function() {
 };
 
 const showCourse = document.querySelectorAll(".course a")
-// console.log(showCourse);
 showCourse.forEach(showCourse=>{
   showCourse.onclick = ()=>{
     anyCoyrse = function() {
@@ -535,88 +528,11 @@ showCourse.forEach(showCourse=>{
   }
 })
 
-
-
-// export const whyUsCards = [
-//     {
-//         icon: "fa-solid fa-book",
-//         title:{
-//             ar:"محتوى أكاديمي منظم",
-//             en:""
-//         },
-//         desc:{
-//             ar:"نوفر محتوى دراسيًا مرتبًا يساعدك على الوصول للمعلومة بسرعة ووضوح.",
-//             en:""
-//         }
-//     },
-//     {
-//         icon: "fa-solid fa-rocket",
-//         title:{
-//             ar:"سرعة في الوصول",
-//             en:""
-//         },
-//         desc:{
-//             ar:"منصة سريعة وسهلة الاستخدام تمكّنك من الوصول إلى الكورسات والمحاضرات فورًا.",
-//             en:""
-//         }
-//     },
-//     {
-//         icon: "fa-solid fa-users",
-//         title:{
-//             ar:"مصممة للطلاب",
-//             en:""
-//         },
-//         desc:{
-//             ar:"التجربة التعليمية مبنية لتناسب احتياجات طلاب الهندسة وتقنية المعلومات.",
-//             en:""
-//         }
-//     },
-//     {
-//         icon: "fa-solid fa-medal",
-//         title:{
-//             ar:"جودة تعليمية",
-//             en:""
-//         },
-//         desc:{
-//             ar:"نركز على تقديم محتوى موثوق وواضح يرفع مستوى التحصيل الأكاديمي.",
-//             en:""
-//         }
-//     },
-//     {
-//         icon: "fa-solid fa-bolt-lightning",
-//         title:{
-//             ar:"تحديث مستمر",
-//             en:""
-//         },
-//         desc:{
-//             ar:"نعمل على تحسين المحتوى والمنصة بشكل دوري لمواكبة التطورات التعليمية.",
-//             en:""
-//         }
-//     },
-//     {
-//         icon: "fa-regular fa-lightbulb",
-//         title:{
-//             ar:"تعلم بذكاء",
-//             en:""
-//         },
-//         desc:{
-//             ar:"أدوات العرض والتصفية تساعدك على اختيار الكورس المناسب بسهولة.",
-//             en:""
-//         }
-//     },
-// ]
-
-
-
-import * as script from "./script.js";
 import * as course from "./course.js";
 import * as CoursePresentationn from "./CoursePresentationn.js"
-// import * as about from "./about.js";
 
-script.reset()
 course.reset()
 CoursePresentationn.reset()
-// about.reset()
 
 const resources = {
   en: {
@@ -673,7 +589,6 @@ const resources = {
         showBtn: "Show Course"
       },
       CoursePresentationn: {
-        // pageTitle: "Engineering Mathematics",
         back: "<- Back to Courses",
         progressTitle: "Course Progress",
         lessonWord: "Lesson",
@@ -770,7 +685,6 @@ const resources = {
         showBtn: "عرض الكورس"
       },
       CoursePresentationn: {
-        // pageTitle: "الرياضيات الهندسية",
         back: "<- العودة إلى الكورسات",
         progressTitle: "تقدم الكورس",
         lessonWord: "محاضرة",
@@ -834,10 +748,8 @@ lang.onclick = () => {
         localStorage.setItem("lang", newLang);
 
 
-        script.reset()
         course.reset()
         CoursePresentationn.reset()
-        // about.reset()
         side.classList.remove('open')
 
 
@@ -859,10 +771,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (lang) {
       lang.textContent = savedLang === "ar" ? "English" : "العربية";
     }
-    script.reset();
     course.reset();
     CoursePresentationn.reset()
-    // about.reset();
   });
 
 });
@@ -874,18 +784,7 @@ function updateContent() {
   });
 }
 
-function changeLang(lang) {
-  i18next.changeLanguage(lang, () => {
-    updateContent();
-    applyDirection(lang);
-    localStorage.setItem("lang", lang);
-  });
-}
-
-
 function applyDirection(lang) {
   document.documentElement.dir = lang === "ar" ? "rtl" : "ltr";
   document.documentElement.lang = lang;
 }
-
-
