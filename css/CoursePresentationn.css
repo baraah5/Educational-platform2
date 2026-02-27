@@ -187,6 +187,10 @@ body {
 }
 
 @media (max-width: 500px) {
+    .lects {
+        width: 100%;
+        margin-inline: auto;
+    }
 
     .sec2 > div {
         padding-inline: 10px;
@@ -271,5 +275,16 @@ body {
 
     .container {
         width: 98% !important;
+    }
+}
+
+@media (max-width: 400px) {
+    .sec4 .lects .check p {
+        width: 65%;
+        aspect-ratio: 1 / 1;
+        height: auto;
+        min-width: 16px;
+        max-width: 22px;
+        flex-shrink: 0;
     }
 }
