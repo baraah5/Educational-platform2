@@ -28,8 +28,6 @@
 }
 
 .btn2 {
-    width: 197;
-    height: 60;
     transition: all 0.5s ease;
     background-color: #4F39F6;
     color: white;
@@ -110,11 +108,8 @@
 
 .com11 {
     width: fit-content;
-    width: 128;
-    height: 12;
     padding: 6px 80px;
     border-radius: 33554400px;
-    border: 1px solid #ddd;
     margin: 5px;
     background-color: #FFFFFF66;
     border: 0;
@@ -123,11 +118,8 @@
 
 .com12 {
     width: fit-content;
-    width: 128;
-    height: 12;
     padding: 4px 50px;
     border-radius: 33554400px;
-    border: 1px solid #ddd;
     margin: 5px;
     background-color: #FFFFFF4D;
     border: 0;
@@ -135,11 +127,8 @@
 
 .com21 {
     width: fit-content;
-    width: 128;
-    height: 12;
     padding: 6px 100px;
     border-radius: 33554400px;
-    border: 1px solid #ddd;
     margin: 5px;
     background-color: #FFFFFF66;
     border: 0;
@@ -147,11 +136,8 @@
 
 .com22 {
     width: fit-content;
-    width: 128;
-    height: 12;
     padding: 4px 70px;
     border-radius: 33554400px;
-    border: 1px solid #ddd;
     margin: 5px;
     background-color: #FFFFFF4D;
     border: 0;
@@ -159,11 +145,8 @@
 
 .com31 {
     width: fit-content;
-    width: 128;
-    height: 12;
     padding: 6px 75px;
     border-radius: 33554400px;
-    border: 1px solid #ddd;
     margin: 5px;
     background-color: #FFFFFF66;
     border: 0;
@@ -171,11 +154,8 @@
 
 .com32 {
     width: fit-content;
-    width: 128;
-    height: 12;
     padding: 4px 60px;
     border-radius: 33554400px;
-    border: 1px solid #ddd;
     margin: 5px;
     background-color: #FFFFFF4D;
     border: 0;
@@ -205,10 +185,6 @@
 
 .whyUsRow > div {
     display: flex;
-}
-
-.icon3 i {
-    padding: 0;
 }
 
 

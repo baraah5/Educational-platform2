@@ -56,7 +56,14 @@ function inferCode(candidates, dictionary, fallback) {
 }
 
 function ensureAllOption(select, text) {
-  if (!select || select.querySelector('option[value=""]')) return;
+  if (!select) return;
+
+  const existingOption = select.querySelector('option[value=""]');
+  if (existingOption) {
+    existingOption.textContent = text;
+    return;
+  }
+
   const option = document.createElement("option");
   option.value = "";
   option.textContent = text;
