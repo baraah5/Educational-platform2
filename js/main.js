@@ -71,8 +71,8 @@ export const coursesData = [
             en:"Second Level"
         },
     semester: {
-            ar:"الفصل الأول",
-            en:"First Semester"
+            ar:"الفصل الثاني",
+            en:"Second Semester"
         },
     description: { ar: "Lorem ipsum dolor sit, amet consectetur adipisicing.", en: "Lorem ipsum dolor sit, amet consectetur adipisicing." },
     lectures: [
@@ -663,11 +663,12 @@ const resources = {
         desc: "Browse all engineering and information technology courses",
         formTitle: "Filter Courses",
         formSelec1: "Academic Level",
-        formSelec1lev: "Level One",
-        formSelec2lev: "Level Two",
-        formSelec3lev: "Level Three",
+        formSelec1lev: "First Level",
+        formSelec2lev: "Second Level",
+        formSelec3lev: "Third Level",
         formSelec2: "Semester",
         formSelec2seas: "First Semester",
+        formSelec2seas2: "Second Semester",
         courseNo: "Showing Courses",
         showBtn: "Show Course"
       },

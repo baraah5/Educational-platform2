@@ -276,9 +276,9 @@ export function reset() {
         return;
       }
 
-      if (lecturesDone.includes(lectureId)) {
-        return;
-      }
+      // if (lecturesDone.includes(lectureId)) {
+      //   return;
+      // }
 
       const play = document.getElementById("player")
       console.log(play.classList);

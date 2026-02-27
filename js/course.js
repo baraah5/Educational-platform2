@@ -1,99 +1,29 @@
-const courses = document.querySelector(".sec2 .courses")
-const courseBage = document.querySelector(".courseBage")
-const levelsForm = document.querySelector(".levelsForm")
-const coursesNumber = document.querySelector(".sec2 h5")
+﻿const courses = document.querySelector(".sec2 .courses")
+// const courseBage = document.querySelector(".courseBage")
+// const levelsForm = document.querySelector(".levelsForm")
+// const coursesNumber = document.querySelector(".sec2 h5")
+const course = []
+let i = 0
 // console.log(coursesNumber.innerHTML);
 
 
-// console.log(courseBage);
-// console.log(levelsForm);
-// console.log(courses);
-
-// const coursesData = [
-//     {
-//         id: "cs",
-//         name: " أساسيات البرمجة ",
-//         li1: " المستوى الأول ",
-//         li2: " الفصل الأول ",
-//         link: ""
-//     },
-//     {
-//         id: "eng",
-//         name: " الرياضيات الهندسية ",
-//         li1: " المستوى الأول ",
-//         li2: " الفصل الأول ", 
-//         link: "CoursePresentationn.html"
-//     },
-//     {
-//         id: "cs",
-//         name: " قواعد البيانات ",
-//         li1: " المستوى الثاني ",
-//         li2: " الفصل الأول ",
-//         link: ""
-//     },
-//     {
-//         id: "eng",
-//         name: " الدوائر الكهربائية ",
-//         li1: " المستوى الثاني ",
-//         li2: " الفصل الأول ",
-//         link: ""
-//     },
-//     {
-//         id: "cs",
-//         name: " تطوير الويب ",
-//         li1: " المستوى الثالث ",
-//         li2: " الفصل الثاني ",
-//         link: ""
-//     },
-//     {
-//         id: "eng",
-//         name: " الإلكترونيات الرقمية ",
-//         li1: " المستوى الثالث ",
-//         li2: " الفصل الثاني ",
-//         link: ""
-//     },
-//     {
-//         id: "cs",
-//         name: " الذكاء الاصطناعي ",
-//         li1: " المستوى الرابع ",
-//         li2: " الفصل الأول ",
-//         link: ""
-//     },
-//     {
-//         id: "eng",
-//         name: " أنظمة التحكم ",
-//         li1: " المستوى الرابع ",
-//         li2: " الفصل الأول ",
-//         link: ""
-//     },
-//     {
-//         id: "cs",
-//         name: " أمن المعلومات ",
-//         li1: " المستوى الخامس ",
-//         li2: " الفصل الثاني ",
-//         link: ""
-//     },
-//     {
-//         id: "eng",
-//         name: " هندسة الطاقة ",
-//         li1: " المستوى الخامس ",
-//         li2: " الفصل الثاني ",
-//         link: ""
-//     },
-//     {
-//         id: "cs",
-//         name: " هندسة البرمجيات ",
-//         li1: " المستوى الثالث ",
-//         li2: " الفصل الأول ",
-//         link: ""
-//     },
-// ]
 
 import { coursesData } from "./main.js"
 import { siteLang } from "./main.js"
 // import { courseBageInfo } from "./main.js"
 // import { levelsFormIfo } from "./main.js"
 const SELECTED_COURSE_KEY = "selectedCourseId";
+const LEVEL_PATTERNS = [
+  { code: "level1", patterns: [/first level/i, /المستوى\s*الأول/, /المستوى\s*الاول/] },
+  { code: "level2", patterns: [/second level/i, /المستوى\s*الثاني/] },
+  { code: "level3", patterns: [/third level/i, /المستوى\s*الثالث/] },
+  { code: "level4", patterns: [/fourth level/i, /المستوى\s*الرابع/] },
+  { code: "level5", patterns: [/fifth level/i, /المستوى\s*الخامس/] },
+];
+const SEMESTER_PATTERNS = [
+  { code: "season1", patterns: [/first semester/i, /الفصل\s*الأول/, /الفصل\s*الاول/] },
+  { code: "season2", patterns: [/second semester/i, /الفصل\s*الثاني/] },
+];
 
 function getLocalizedValue(value, lang) {
   if (value && typeof value === "object") {
@@ -114,78 +44,48 @@ function getLocalizedValue(value, lang) {
   return value ?? "";
 }
 
+function getValueCandidates(value) {
+  if (value && typeof value === "object") {
+    return [value.ar, value.en].filter(Boolean);
+  }
+  return [value].filter(Boolean);
+}
 
-// const coursesNumberInfo = [
-//     {
-//       first:{
-//         ar:"عرض",
-//         en:"Offer of"
-//       },
-//       sec:{
-//         ar:"كورس",
-//         en:"courses"
-//       }
-//     }
-// ]
+function inferCode(candidates, dictionary, fallback) {
+  for (const candidate of candidates) {
+    const text = String(candidate).trim();
+    if (!text) continue;
+    const match = dictionary.find(({ patterns }) => patterns.some((pattern) => pattern.test(text)));
+    if (match) {
+      return match.code;
+    }
+  }
+  return fallback;
+}
+
+function ensureAllOption(select, text) {
+  if (!select || select.querySelector('option[value=""]')) return;
+  const option = document.createElement("option");
+  option.value = "";
+  option.textContent = text;
+  select.insertAdjacentElement("afterbegin", option);
+}
+
+
 
 export function reset(){
+  i = 0
 
   if(courses){
         courses.innerHTML = ""
         // console.log(siteLang);
     }
 
-    // if(courseBage){
-    //   courseBage.innerHTML = ""
-    // }
-
-    // if(levelsForm){
-    //   levelsForm.innerHTML = ""
-    // }
-
-    // courseBageInfo.forEach(info =>{
-    //   // console.log("info");
-    //   let item =`<div class="container courseBage my-5 mb-2">
-    //   <h1>${info.title[siteLang]}</h1>
-    //   <p>${info.desc[siteLang]}</p>
-    // </div>`
-
-    // // console.log(courseBage);
-
-    // courseBage?.insertAdjacentHTML('beforeend', item);
-    // })
-
-    // levelsFormIfo.forEach(lev =>{
-    //   let item = `<section class="container levelsForm sec1">
-    //   <form action="">
-    //     <!-- <i class="fa-light fa-filter"></i> -->
-    //     <p><i class="fa-solid fa-filter"></i>${lev.formName[siteLang]}</p>
-    //     <div class="row justify-content-around">
-    //       <div class="col contact-form">
-    //         <label for="">${lev.level[siteLang]}</label>
-    //         <input type="text" placeholder="${lev.levelPlace[siteLang]}">
-    //       </div>
-
-    //       <div class="col contact-form">
-    //         <label for="">${lev.chapter[siteLang]}</label>
-    //         <input type="text" placeholder="${lev.chapterPlace[siteLang]}">
-    //       </div>
-    //     </div>
-    //   </form>
-    // </section>`
-
-    // levelsForm?.insertAdjacentHTML('beforeend', item);
-    // })
-
-    // console.log(coursesData.length);
     
-    // if(coursesNumber){
-    //   coursesNumberInfo.forEach(no =>{
-    //   coursesNumber.innerHTML = `${no.first[siteLang]} ${coursesData.length} ${no.sec[siteLang]}`
-    // })
-    // }
-
     const showCourseText = window.i18next ? i18next.t("course.showBtn") : "عرض الكورس";
+    const allFilterText = siteLang === "ar" ? "الكل" : "All";
+    ensureAllOption(levelSelect, allFilterText);
+    ensureAllOption(semesterSelect, allFilterText);
 
     coursesData.forEach(course => {
     
@@ -195,12 +95,22 @@ export function reset(){
           const courseTitle = getLocalizedValue(course.title ?? course.name, siteLang);
           const courseLevel = getLocalizedValue(course.level ?? course.li1, siteLang);
           const courseSemester = getLocalizedValue(course.semester ?? course.li2, siteLang);
+          const levelCode = inferCode(
+            getValueCandidates(course.level ?? course.li1),
+            LEVEL_PATTERNS,
+            ""
+          );
+          const semesterCode = inferCode(
+            getValueCandidates(course.semester ?? course.li2),
+            SEMESTER_PATTERNS,
+            ""
+          );
           const baseCourseLink = course.link || "CoursePresentationn.html";
           const separator = baseCourseLink.includes("?") ? "&" : "?";
           const courseLink = `${baseCourseLink}${separator}course=${encodeURIComponent(course.id)}`;
 
           if(facultyClass === "cs"){
-              item = `<div class="col-lg-4 col-md-6 mb-4">
+              item = `<div class="col-lg-4 col-md-6 mb-4" data-level="${levelCode}" data-semester="${semesterCode}">
             <div class="course">
               <div class="title cs px-3 py-2">${course.idName[siteLang]}</div>
               <h5 class="pb-2 bold">${courseTitle}</h5>
@@ -212,7 +122,7 @@ export function reset(){
             </div>
           </div>`
           }else{
-              item = `<div class="col-lg-4 col-md-6 mb-4">
+              item = `<div class="col-lg-4 col-md-6 mb-4" data-level="${levelCode}" data-semester="${semesterCode}">
             <div class="course">
               <div class="title eng px-3 py-2">${course.idName[siteLang]}</div>
               <h5 class="pb-2 bold">${courseTitle}</h5>
@@ -224,11 +134,17 @@ export function reset(){
             </div>
           </div>`
           }
-
+          course[i] = item
+          // console.log(course[i]);
+          i++;
           courses?.insertAdjacentHTML('beforeend', item);
       
       
   })
+
+  if (levelSelect) levelSelect.value = "";
+  if (semesterSelect) semesterSelect.value = "";
+  filterCourses();
 
   if (courses && !courses.dataset.selectionBound) {
     courses.addEventListener("click", (event) => {
@@ -245,4 +161,51 @@ export function reset(){
   }
 }
 
+// const options = document.querySelectorAll("option")
+
+// function optionsF( ){
+// const courseCard = document.querySelectorAll(".course")
+//   console.log(courseCard);
+// }
+
+// console.log(options);
+
+// options.forEach(el =>{
+//   el.onclick = ()=>{
+//     // console.log(courseCard);
+//     optionsF()
+//   }
+// })
+
+// optionsF()
+
 // reset();
+
+// reset();
+
+const levelSelect = document.querySelector("#levels");
+const semesterSelect = document.querySelector("#seasons");
+
+function filterCourses() {
+  if (!levelSelect || !semesterSelect) return;
+
+  const levelValue = levelSelect.value.trim();
+  const semesterValue = semesterSelect.value.trim();
+
+  const cards = document.querySelectorAll(".sec2 .courses > div");
+
+  cards.forEach(card => {
+    const matchLevel = !levelValue || card.dataset.level === levelValue;
+    const matchSemester = !semesterValue || card.dataset.semester === semesterValue;
+
+    if (matchLevel && matchSemester) {
+      card.style.display = "";
+    } else {
+      card.style.display = "none";
+    }
+  });
+}
+
+// لما يتغير أي واحد منهم
+if (levelSelect) levelSelect.addEventListener("change", filterCourses);
+if (semesterSelect) semesterSelect.addEventListener("change", filterCourses);
