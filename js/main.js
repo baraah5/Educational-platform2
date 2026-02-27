@@ -1,13 +1,8 @@
 ﻿AOS.init();
-
-
-
 const active = document.querySelector('.back-top')
 const lang = document.querySelector(".lang")
 
 export let siteLang = localStorage.getItem("lang") || document.documentElement.lang || "en";
-
-
 
 window.onscroll = ()=>{
 
